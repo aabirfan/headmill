@@ -97,7 +97,7 @@ nav{
 /* ── HERO ── */
 .hero{
   min-height:100vh;display:flex;flex-direction:column;
-  justify-content:flex-end;padding:0 5vw 5rem;
+  justify-content:flex-end;padding:8rem 5vw 5rem;
   position:relative;border-bottom:1px solid var(--border);
   overflow:hidden;
 }
