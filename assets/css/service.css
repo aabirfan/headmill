@@ -1,0 +1,247 @@
+/* ═══════════════════════════════════════════════════════════════
+   Headmill Capital — service.css
+   Service detail pages (mortgages, protection, commercial):
+   page hero, offering cards, process steps. Requires base.css.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── PAGE HERO ──────────────────────────────────────────────── */
+.page-hero-wrap { padding-top: 2rem; }
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--forest);
+  padding: 4rem 1.5rem;
+  box-shadow: var(--shadow-softlg);
+}
+
+.page-hero-circle {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 50%;
+}
+.page-hero-circle.c1 { right: -6rem; top: -6rem; width: 18rem; height: 18rem; background: rgba(90, 127, 59, 0.5); }
+.page-hero-circle.c2 { right: 4rem; bottom: -6rem; width: 10rem; height: 10rem; background: rgba(240, 233, 194, 0.2); }
+
+.page-hero-content { position: relative; max-width: 42rem; }
+
+.page-hero h1 {
+  margin-top: 1.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.page-hero h1 .accent { color: var(--cream); }
+
+.page-hero-sub {
+  margin-top: 1.25rem;
+  max-width: 36rem;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.page-hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ── BREADCRUMB ─────────────────────────────────────────────── */
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(240, 233, 194, 0.7);
+}
+
+.crumbs a { color: var(--cream); transition: color 0.2s; }
+.crumbs a:hover { color: #fff; }
+
+/* ── OFFERINGS ──────────────────────────────────────────────── */
+.offer-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.offer-card {
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--line-lt);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.offer-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.offer-card h3::before {
+  content: "";
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--forest);
+}
+
+.offer-card p {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-70);
+}
+
+/* ── PROCESS STEPS ──────────────────────────────────────────── */
+.steps-panel {
+  border-radius: var(--radius);
+  background: var(--cream-lt);
+  padding: 3rem 1.5rem;
+}
+
+.steps-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--cream);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.step h3 { margin-top: 1rem; font-size: 1rem; font-weight: 800; }
+
+.step p {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--ink-70);
+}
+
+/* ── CALCULATOR ─────────────────────────────────────────────── */
+.calc-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: stretch; /* both columns same height */
+}
+
+.calc-inputs {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--line-lt);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.calc-inputs .f-row { margin-bottom: 1.5rem; }
+
+.calc-inputs .f-group input {
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.calc-disclaimer {
+  margin-top: auto; /* pin to card bottom */
+  padding-top: 1.5rem;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--ink-50);
+}
+
+.calc-results { display: flex; flex-direction: column; gap: 1rem; }
+
+.calc-results .result-card.primary { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+.calc-results-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.calc-results-row .result-card { padding: 1.5rem; }
+.calc-results-row .result-card-value { font-size: 1.75rem; }
+
+.result-card {
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--line-lt);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.result-card.primary {
+  background: var(--forest);
+  border-color: transparent;
+  box-shadow: var(--shadow-softlg);
+}
+
+.result-card-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+}
+
+.result-card.primary .result-card-label { color: rgba(240, 233, 194, 0.8); }
+
+.result-card-value {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  line-height: 1.1;
+}
+
+.result-card.primary .result-card-value { font-size: 2.5rem; color: #fff; }
+
+.result-card-desc { margin-top: 0.5rem; font-size: 0.8125rem; color: var(--ink-50); }
+.result-card.primary .result-card-desc { color: rgba(255, 255, 255, 0.7); }
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .offer-grid { grid-template-columns: 1fr; }
+  .calc-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .page-hero { padding: 3rem 1.5rem; }
+}
+
+@media (max-width: 640px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  .calc-results-row { grid-template-columns: 1fr; }
+  .page-hero-actions .btn { width: 100%; }
+}
+
+@media (min-width: 641px) {
+  .page-hero { padding: 5rem 3rem; }
+  .steps-panel { padding: 4rem 3rem; }
+}

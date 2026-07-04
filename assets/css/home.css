@@ -1,0 +1,345 @@
+/* ═══════════════════════════════════════════════════════════════
+   Headmill Capital — home.css
+   Homepage layouts only: hero, lenders, services, stats, about,
+   reviews. Shared components live in base.css.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── HERO ───────────────────────────────────────────────────── */
+.hero-wrap { padding-top: 2rem; }
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--forest);
+  padding: 4rem 1.5rem;
+  box-shadow: var(--shadow-softlg);
+}
+
+.hero-circle {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 50%;
+}
+.hero-circle.c1 { right: -6rem; top: -6rem; width: 20rem; height: 20rem; background: rgba(90, 127, 59, 0.5); }
+.hero-circle.c2 { right: -2rem; top: 8rem; width: 10rem; height: 10rem; background: rgba(240, 233, 194, 0.2); }
+.hero-circle.c3 { bottom: -8rem; left: -4rem; width: 16rem; height: 16rem; background: rgba(61, 90, 38, 0.6); }
+
+.hero-content { position: relative; max-width: 42rem; }
+
+.hero h1 {
+  margin-top: 2rem;
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.hero h1 .accent { color: var(--cream); }
+
+.hero-sub {
+  margin-top: 1.5rem;
+  max-width: 36rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-points {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(240, 233, 194, 0.8);
+}
+
+.hero-points li { display: flex; align-items: center; gap: 0.5rem; }
+.hero-points li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cream);
+}
+
+/* ── LENDERS ────────────────────────────────────────────────── */
+.lenders { padding: 4rem 0; }
+
+.lenders-label {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-50);
+}
+
+.lenders-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.lender-item {
+  border-radius: 999px;
+  background: var(--cream-lt);
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ink-60);
+}
+
+/* ── SERVICES ───────────────────────────────────────────────── */
+.services-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--line-lt);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-softlg);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--cream-lt);
+  color: var(--forest);
+}
+
+.service-card h3 { margin-top: 1.5rem; font-size: 1.25rem; font-weight: 800; }
+
+.service-card p {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--ink-70);
+}
+
+.service-link {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--forest);
+  transition: color 0.2s;
+}
+
+.service-card:hover .service-link { color: var(--pine); }
+
+/* ── STATS ──────────────────────────────────────────────────── */
+.stats-panel {
+  border-radius: var(--radius);
+  background: var(--cream-lt);
+  padding: 3rem 1.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.stat-num {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  line-height: 1;
+}
+
+.stat-num span { color: var(--moss); }
+
+.stat-label {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+}
+
+.stat-desc {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--ink-70);
+}
+
+/* ── ABOUT ──────────────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-softlg);
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  max-height: 34rem;
+  object-fit: cover;
+}
+
+.about-body h2 {
+  margin-top: 1.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.about-accent { color: var(--forest); }
+
+.about-body p {
+  margin-top: 1rem;
+  line-height: 1.7;
+  color: var(--ink-70);
+}
+
+.about-points {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink-70);
+}
+
+.about-points li { display: flex; align-items: baseline; gap: 0.75rem; }
+.about-points li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--forest);
+}
+
+.about-body .btn { margin-top: 2rem; }
+
+/* ── REVIEWS ────────────────────────────────────────────────── */
+.reviews-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.reviews-rating { font-size: 0.875rem; font-weight: 600; color: var(--ink-60); }
+.reviews-rating .stars { color: var(--forest); }
+
+.reviews-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--line-lt);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.review-stars {
+  color: var(--forest);
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+}
+
+.review-text {
+  margin-top: 1rem;
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: rgba(31, 42, 26, 0.8);
+}
+
+.review-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--cream-lt);
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--forest);
+  flex-shrink: 0;
+}
+
+.review-name { font-size: 0.875rem; font-weight: 700; }
+.review-src { font-size: 0.75rem; font-weight: 600; color: var(--ink-50); }
+
+/* ── RESPONSIVE (home) ──────────────────────────────────────── */
+@media (max-width: 900px) {
+  .services-grid,
+  .reviews-grid { grid-template-columns: 1fr; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-photo img { max-height: 22rem; }
+
+  .hero { padding: 3rem 1.5rem; }
+}
+
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  .hero-actions .btn { width: 100%; }
+}
+
+@media (min-width: 641px) {
+  .hero { padding: 6rem 3rem; }
+  .stats-panel { padding: 4rem 3rem; }
+}
