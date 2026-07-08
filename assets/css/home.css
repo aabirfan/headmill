@@ -84,22 +84,66 @@
   color: var(--ink-50);
 }
 
-.lenders-list {
+/* Marquee: duplicated sets, JS drives auto-drift + arrow presses */
+.lenders-row {
   margin-top: 2rem;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
 }
 
-.lender-item {
-  border-radius: 999px;
-  background: var(--cream-lt);
-  padding: 0.5rem 1.5rem;
-  font-size: 0.875rem;
-  font-weight: 700;
+.lenders-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
   color: var(--ink-60);
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: background 0.2s, color 0.2s;
+}
+
+.lenders-btn:hover {
+  background: var(--forest);
+  color: #fff;
+}
+
+.lenders-marquee {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.lenders-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.lenders-set {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+.lender-item {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.lender-item img {
+  display: block;
+  width: auto;
+  opacity: 0.9;
 }
 
 /* ── SERVICES ───────────────────────────────────────────────── */

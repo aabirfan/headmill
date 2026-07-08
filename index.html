@@ -33,8 +33,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="assets/css/base.css"/>
-<link rel="stylesheet" href="assets/css/home.css"/>
+<link rel="stylesheet" href="assets/css/base.css?v=2"/>
+<link rel="stylesheet" href="assets/css/home.css?v=2"/>
 </head>
 <body>
 
@@ -50,13 +50,11 @@
       <li><a href="mortgages.html">Mortgages</a></li>
       <li><a href="protection.html">Protection</a></li>
       <li><a href="commercial.html">Commercial</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
 
     <div class="nav-right">
       <a href="tel:07751642512" class="nav-phone">07751 642 512</a>
-      <a href="#contact" class="nav-cta">Get advice</a>
+      <a href="#contact" class="nav-cta">Contact</a>
       <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span>
         <span></span>
@@ -72,10 +70,8 @@
     <li><a href="mortgages.html"  class="mobile-nav-link">Mortgages</a></li>
     <li><a href="protection.html" class="mobile-nav-link">Protection</a></li>
     <li><a href="commercial.html" class="mobile-nav-link">Commercial</a></li>
-    <li><a href="#reviews"        class="mobile-nav-link">Reviews</a></li>
-    <li><a href="#contact"        class="mobile-nav-link">Contact</a></li>
   </ul>
-  <a href="#contact" class="btn btn-solid">Get advice</a>
+  <a href="#contact" class="btn btn-solid">Contact</a>
 </div>
 
 <!-- ── HERO ── -->
@@ -115,17 +111,41 @@
 <!-- ── LENDERS ── -->
 <div class="container lenders" aria-label="Lender panel access">
   <p class="lenders-label">Access to every major UK lender, and dozens more</p>
-  <div class="lenders-list">
-    <span class="lender-item">NatWest</span>
-    <span class="lender-item">Barclays</span>
-    <span class="lender-item">Halifax</span>
-    <span class="lender-item">Nationwide</span>
-    <span class="lender-item">Santander</span>
-    <span class="lender-item">HSBC</span>
-    <span class="lender-item">Lloyds</span>
-    <span class="lender-item">Accord</span>
-    <span class="lender-item">Virgin Money</span>
-    <span class="lender-item">Coventry BS</span>
+  <div class="lenders-row">
+    <button class="lenders-btn" id="lenders-prev" type="button" aria-label="Scroll lenders left">
+      <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg>
+    </button>
+    <div class="lenders-marquee" id="lenders-marquee">
+      <div class="lenders-track">
+      <div class="lenders-set">
+        <span class="lender-item"><img src="assets/img/lenders/natwest.svg" alt="NatWest" loading="lazy" decoding="async" width="152" height="32"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/barclays.svg" alt="Barclays" loading="lazy" decoding="async" width="157" height="26"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/halifax.svg" alt="Halifax" loading="lazy" decoding="async" width="62" height="40"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/nationwide.svg" alt="Nationwide" loading="lazy" decoding="async" width="198" height="26"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/santander.svg" alt="Santander" loading="lazy" decoding="async" width="184" height="32"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/hsbc.svg" alt="HSBC" loading="lazy" decoding="async" width="119" height="32"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/lloyds.svg" alt="Lloyds Bank" loading="lazy" decoding="async" width="191" height="21"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/accord.png" alt="Accord Mortgages" loading="lazy" decoding="async" width="146" height="30"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/virgin-money.svg" alt="Virgin Money" loading="lazy" decoding="async" width="91" height="40"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/coventry.png" alt="Coventry Building Society" loading="lazy" decoding="async" width="113" height="40"/></span>
+      </div>
+      <div class="lenders-set" aria-hidden="true">
+        <span class="lender-item"><img src="assets/img/lenders/natwest.svg" alt="" loading="lazy" decoding="async" width="152" height="32"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/barclays.svg" alt="" loading="lazy" decoding="async" width="157" height="26"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/halifax.svg" alt="" loading="lazy" decoding="async" width="62" height="40"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/nationwide.svg" alt="" loading="lazy" decoding="async" width="198" height="26"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/santander.svg" alt="" loading="lazy" decoding="async" width="184" height="32"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/hsbc.svg" alt="" loading="lazy" decoding="async" width="119" height="32"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/lloyds.svg" alt="" loading="lazy" decoding="async" width="191" height="21"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/accord.png" alt="" loading="lazy" decoding="async" width="146" height="30"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/virgin-money.svg" alt="" loading="lazy" decoding="async" width="91" height="40"/></span>
+        <span class="lender-item"><img src="assets/img/lenders/coventry.png" alt="" loading="lazy" decoding="async" width="113" height="40"/></span>
+      </div>
+      </div>
+    </div>
+    <button class="lenders-btn" id="lenders-next" type="button" aria-label="Scroll lenders right">
+      <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5"/></svg>
+    </button>
   </div>
 </div>
 
@@ -174,7 +194,7 @@
       <div>
         <div class="stat-num">20<span>+</span></div>
         <div class="stat-label">Years experience</div>
-        <p class="stat-desc">Across NatWest, Barclays and other major UK banks before going independent.</p>
+        <p class="stat-desc">Across Lloyds, Barclays, HSBC and other major UK banks before going independent.</p>
       </div>
       <div>
         <div class="stat-num">&pound;0</div>
@@ -384,5 +404,6 @@
 
 <script src="assets/js/shared.js"></script>
 <script src="assets/js/form.js"></script>
+<script src="assets/js/lenders.js?v=2"></script>
 </body>
 </html>
