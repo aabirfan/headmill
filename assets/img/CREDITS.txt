@@ -1,0 +1,16 @@
+Photography credits
+===================
+
+All photographs below are from Unsplash and are used under the Unsplash
+License (free for commercial use, no attribution required, but credit is
+appreciated). Source photo IDs are listed so the original can be traced
+back to its photographer at https://unsplash.com.
+
+svc-mortgages.jpg    Unsplash photo-1595751100377-9954f1f99bad
+svc-protection.jpg   Unsplash photo-1761839258803-21515f43190c
+svc-commercial.jpg   Unsplash photo-1612982295243-ce2bacc2dfbd
+band-mortgages.jpg   Unsplash photo-1618660920685-4505debb785a
+band-protection.jpg  Unsplash photo-1713942590368-09cfc6ae94ce
+band-commercial.jpg  Unsplash photo-1622374634302-b15fb01fcfde
+
+green-door.jpg       © Ben Prater (per embedded EXIF copyright)

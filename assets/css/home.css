@@ -159,6 +159,7 @@
   background: #fff;
   border: 1px solid var(--line-lt);
   padding: 2rem;
+  overflow: hidden;
   box-shadow: var(--shadow-soft);
   transition: box-shadow 0.2s, transform 0.2s;
 }
@@ -168,7 +169,26 @@
   transform: translateY(-4px);
 }
 
+/* Photo bleeds out to the card edges; the icon sits half over it */
+.service-media {
+  margin: -2rem -2rem 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--cream-lt);
+}
+
+.service-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-media img { transform: scale(1.05); }
+
 .service-icon {
+  position: relative;
+  margin-top: -1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,6 +197,7 @@
   border-radius: 50%;
   background: var(--cream-lt);
   color: var(--forest);
+  box-shadow: 0 0 0 5px #fff;
 }
 
 .service-card h3 { margin-top: 1.5rem; font-size: 1.25rem; font-weight: 800; }

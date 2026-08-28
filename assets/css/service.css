@@ -105,6 +105,31 @@
   color: var(--ink-70);
 }
 
+/* ── PHOTO BAND ─────────────────────────────────────────────── */
+/* --band-focus sets the vertical crop point, per image, from the HTML */
+.media-band-frame {
+  aspect-ratio: 21 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--cream-lt);
+  box-shadow: var(--shadow-softlg);
+}
+
+.media-band-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% var(--band-focus, 50%);
+}
+
+.media-band figcaption {
+  margin-top: 1.25rem;
+  max-width: 42rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-60);
+}
+
 /* ── PROCESS STEPS ──────────────────────────────────────────── */
 .steps-panel {
   border-radius: var(--radius);
@@ -233,12 +258,14 @@
   .calc-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .page-hero { padding: 3rem 1.5rem; }
+  .media-band-frame { aspect-ratio: 16 / 9; }
 }
 
 @media (max-width: 640px) {
   .steps-grid { grid-template-columns: 1fr; }
   .calc-results-row { grid-template-columns: 1fr; }
   .page-hero-actions .btn { width: 100%; }
+  .media-band-frame { aspect-ratio: 4 / 3; }
 }
 
 @media (min-width: 641px) {
