@@ -4,89 +4,100 @@
    reviews. Shared components live in base.css.
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── HERO ───────────────────────────────────────────────────── */
-.hero-wrap { padding-top: 2rem; }
-
+/* ── HERO ─────────────────────────────────────────────────────
+   Full-bleed rather than a card in a box: the statement is the
+   page, and the nav's material floats over it. Depth comes from
+   two soft radial fields, not hard-edged decorative circles.    */
 .hero {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
-  border-radius: var(--radius);
   background: var(--forest);
-  padding: 4rem 1.5rem;
-  box-shadow: var(--shadow-softlg);
+  margin-top: -4.25rem;          /* content passes under the chrome */
+  padding: 11rem 0 7rem;
 }
 
-.hero-circle {
-  pointer-events: none;
+.hero-field {
   position: absolute;
-  border-radius: 50%;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(70% 90% at 88% -10%, rgba(240, 233, 194, 0.22), transparent 62%),
+    radial-gradient(90% 100% at 12% 115%, rgba(61, 90, 38, 0.95), transparent 66%),
+    radial-gradient(55% 70% at 65% 40%, rgba(90, 127, 59, 0.55), transparent 70%);
 }
-.hero-circle.c1 { right: -6rem; top: -6rem; width: 20rem; height: 20rem; background: rgba(90, 127, 59, 0.5); }
-.hero-circle.c2 { right: -2rem; top: 8rem; width: 10rem; height: 10rem; background: rgba(240, 233, 194, 0.2); }
-.hero-circle.c3 { bottom: -8rem; left: -4rem; width: 16rem; height: 16rem; background: rgba(61, 90, 38, 0.6); }
 
-.hero-content { position: relative; max-width: 42rem; }
+.hero-content { position: relative; max-width: 74rem; }
 
 .hero h1 {
   margin-top: 2rem;
-  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  max-width: 18ch;
+  font-size: var(--fs-display);
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: var(--lh-display);
+  letter-spacing: var(--tr-display);
   color: #fff;
+  text-wrap: balance;
 }
 
 .hero h1 .accent { color: var(--cream); }
 
 .hero-sub {
-  margin-top: 1.5rem;
-  max-width: 36rem;
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.85);
+  margin-top: 1.75rem;
+  max-width: 34rem;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  letter-spacing: var(--tr-lead);
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .hero-actions {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.875rem;
 }
 
 .hero-points {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(240, 233, 194, 0.16);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  font-size: 0.875rem;
+  gap: 0.75rem 2rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
-  color: rgba(240, 233, 194, 0.8);
+  letter-spacing: -0.004em;
+  color: rgba(240, 233, 194, 0.85);
 }
 
-.hero-points li { display: flex; align-items: center; gap: 0.5rem; }
+.hero-points li { display: flex; align-items: center; gap: 0.625rem; }
 .hero-points li::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--cream);
+  flex-shrink: 0;
 }
 
-/* ── LENDERS ────────────────────────────────────────────────── */
-.lenders { padding: 4rem 0; }
+/* ── LENDERS ──────────────────────────────────────────────────
+   Draggable strip. Track position is owned by lenders.js so it
+   can be grabbed, thrown and caught — no CSS transition here.   */
+.lenders { padding: 4.5rem 0 1rem; }
 
 .lenders-label {
   text-align: center;
-  font-size: 0.72rem;
+  font-size: var(--fs-label);
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-50);
 }
 
-/* Marquee: duplicated sets, JS drives auto-drift + arrow presses */
 .lenders-row {
-  margin-top: 2rem;
+  margin-top: 2.25rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -104,22 +115,27 @@
   background: #fff;
   color: var(--ink-60);
   cursor: pointer;
-  box-shadow: var(--shadow-soft);
-  transition: background 0.2s, color 0.2s;
+  box-shadow: var(--sh-1);
+  transition: background 0.2s var(--ease-out),
+              color 0.2s var(--ease-out),
+              transform 0.2s var(--ease-out);
 }
 
-.lenders-btn:hover {
-  background: var(--forest);
-  color: #fff;
-}
+.lenders-btn:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+.lenders-btn:active { transform: scale(0.92); transition-duration: 0.1s; }
 
 .lenders-marquee {
   flex: 1;
   min-width: 0;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  cursor: grab;
+  touch-action: pan-y;         /* horizontal drags are ours, vertical scroll isn't */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
+
+.lenders-marquee.dragging { cursor: grabbing; }
 
 .lenders-track {
   display: flex;
@@ -130,48 +146,52 @@
 .lenders-set {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  padding-right: 3rem;
+  gap: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .lender-item {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .lender-item img {
   display: block;
   width: auto;
-  opacity: 0.9;
+  opacity: 0.85;
+  pointer-events: none;        /* never let the browser's native image drag win */
 }
 
-/* ── SERVICES ───────────────────────────────────────────────── */
+/* ── SERVICES ─────────────────────────────────────────────────
+   Media-first cards. Hover lifts; press settles back down, so
+   the card acknowledges the touch before the page navigates.    */
 .services-grid {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .service-card {
-  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--r);
   background: #fff;
   border: 1px solid var(--line-lt);
-  padding: 2rem;
+  padding: 0 1.75rem 1.75rem;
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: var(--sh-1);
+  transition: box-shadow 0.35s var(--ease-out), transform 0.35s var(--ease-out);
 }
 
-.service-card:hover {
-  box-shadow: var(--shadow-softlg);
-  transform: translateY(-4px);
-}
+.service-card:hover { box-shadow: var(--sh-2); transform: translateY(-6px); }
+.service-card:active { transform: translateY(-2px); transition-duration: 0.12s; }
 
-/* Photo bleeds out to the card edges; the icon sits half over it */
 .service-media {
-  margin: -2rem -2rem 0;
+  margin: 0 -1.75rem;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--cream-lt);
@@ -181,10 +201,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.7s var(--ease-out);
 }
 
-.service-card:hover .service-media img { transform: scale(1.05); }
+.service-card:hover .service-media img { transform: scale(1.045); }
 
 .service-icon {
   position: relative;
@@ -200,31 +220,45 @@
   box-shadow: 0 0 0 5px #fff;
 }
 
-.service-card h3 { margin-top: 1.5rem; font-size: 1.25rem; font-weight: 800; }
+.service-card h3 {
+  margin-top: 1.5rem;
+  font-size: var(--fs-h3);
+  font-weight: 800;
+  letter-spacing: var(--tr-h3);
+  line-height: var(--lh-h3);
+}
 
 .service-card p {
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.7;
+  margin-top: 0.875rem;
+  flex: 1;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
   color: var(--ink-70);
 }
 
 .service-link {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
+  letter-spacing: -0.008em;
   color: var(--forest);
-  transition: color 0.2s;
+  transition: color 0.2s var(--ease-out);
 }
 
+/* The arrow leans toward where the link is taking you. */
+.service-link span {
+  display: inline-block;
+  transition: transform 0.3s var(--ease-out);
+}
 .service-card:hover .service-link { color: var(--pine); }
+.service-card:hover .service-link span { transform: translateX(4px); }
 
 /* ── STATS ──────────────────────────────────────────────────── */
 .stats-panel {
-  border-radius: var(--radius);
+  border-radius: var(--r-lg);
   background: var(--cream-lt);
   padding: 3rem 1.5rem;
 }
@@ -232,78 +266,81 @@
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .stat-num {
-  font-size: 3rem;
+  font-size: clamp(3rem, 5vw, 3.75rem);
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   color: var(--forest);
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-num span { color: var(--moss); }
 
 .stat-label {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  font-size: var(--fs-label);
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--tr-label);
   text-transform: uppercase;
   color: var(--ink-60);
 }
 
 .stat-desc {
   margin-top: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.7;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
   color: var(--ink-70);
 }
 
 /* ── ABOUT ──────────────────────────────────────────────────── */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 4.5rem;
   align-items: center;
 }
 
 .about-photo {
-  border-radius: var(--radius);
+  border-radius: var(--r-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-softlg);
+  box-shadow: var(--sh-3);
 }
 
 .about-photo img {
   width: 100%;
   height: 100%;
-  max-height: 34rem;
+  max-height: 36rem;
   object-fit: cover;
 }
 
 .about-body h2 {
   margin-top: 1.5rem;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: var(--fs-h2);
   font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  letter-spacing: var(--tr-h2);
+  line-height: var(--lh-h2);
+  text-wrap: balance;
 }
 
 .about-accent { color: var(--forest); }
 
 .about-body p {
-  margin-top: 1rem;
-  line-height: 1.7;
+  margin-top: 1.25rem;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
   color: var(--ink-70);
 }
 
 .about-points {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  font-size: 0.9375rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--ink-70);
 }
@@ -312,13 +349,13 @@
 .about-points li::before {
   content: "";
   flex-shrink: 0;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--forest);
 }
 
-.about-body .btn { margin-top: 2rem; }
+.about-body .btn { margin-top: 2.25rem; }
 
 /* ── REVIEWS ────────────────────────────────────────────────── */
 .reviews-head {
@@ -329,42 +366,46 @@
   gap: 1rem;
 }
 
-.reviews-rating { font-size: 0.875rem; font-weight: 600; color: var(--ink-60); }
-.reviews-rating .stars { color: var(--forest); }
+.reviews-rating { font-size: var(--fs-sm); font-weight: 600; color: var(--ink-60); }
+.reviews-rating .stars { color: var(--forest); letter-spacing: 0.1em; }
 
 .reviews-grid {
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .review-card {
   display: flex;
   flex-direction: column;
-  border-radius: var(--radius);
+  border-radius: var(--r);
   background: #fff;
   border: 1px solid var(--line-lt);
   padding: 2rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--sh-1);
+  transition: box-shadow 0.35s var(--ease-out);
 }
+
+.review-card:hover { box-shadow: var(--sh-2); }
 
 .review-stars {
   color: var(--forest);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.2em;
 }
 
 .review-text {
-  margin-top: 1rem;
+  margin-top: 1.125rem;
   flex: 1;
-  font-size: 0.875rem;
-  line-height: 1.7;
-  color: rgba(31, 42, 26, 0.8);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  letter-spacing: -0.004em;
+  color: rgba(31, 42, 26, 0.82);
 }
 
 .review-footer {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -378,33 +419,37 @@
   height: 2.5rem;
   border-radius: 50%;
   background: var(--cream-lt);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   font-weight: 800;
+  letter-spacing: 0.01em;
   color: var(--forest);
   flex-shrink: 0;
 }
 
-.review-name { font-size: 0.875rem; font-weight: 700; }
-.review-src { font-size: 0.75rem; font-weight: 600; color: var(--ink-50); }
+.review-name { font-size: var(--fs-sm); font-weight: 700; }
+.review-src { font-size: var(--fs-xs); font-weight: 600; color: var(--ink-50); }
 
 /* ── RESPONSIVE (home) ──────────────────────────────────────── */
 @media (max-width: 900px) {
   .services-grid,
   .reviews-grid { grid-template-columns: 1fr; }
 
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .about-photo img { max-height: 22rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-photo img { max-height: 24rem; }
 
-  .hero { padding: 3rem 1.5rem; }
+  .hero { padding: 9rem 0 5rem; }
 }
 
 @media (max-width: 640px) {
   .stats-grid { grid-template-columns: 1fr; gap: 2.5rem; }
 
+  .hero { padding: 8rem 0 4rem; }
   .hero-actions .btn { width: 100%; }
+  .hero-points { margin-top: 2.25rem; gap: 0.625rem 1.5rem; }
+
+  .lenders-btn { display: none; }   /* on touch, dragging is the affordance */
 }
 
 @media (min-width: 641px) {
-  .hero { padding: 6rem 3rem; }
   .stats-panel { padding: 4rem 3rem; }
 }

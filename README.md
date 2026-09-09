@@ -52,9 +52,10 @@ headmill/
     │   ├── service.css     Shared by the three service pages
     │   └── privacy.css     Long-form prose
     ├── js/
-    │   ├── shared.js       Hamburger menu + cookie banner  (every page)
+    │   ├── motion.js       Springs, pointer tracking, momentum   (every page, loads first)
+    │   ├── shared.js       Nav sheet, scroll edge, reveals, cookie notice  (every page)
     │   ├── form.js         Contact form: validation → Formspree
-    │   ├── lenders.js      The drifting lender logo marquee
+    │   ├── lenders.js      The draggable lender logo strip
     │   └── calculator.js   Mortgage maths            (mortgages.html only)
     └── img/
         ├── lenders/        10 lender marks — Barclays, HSBC, Halifax, Lloyds,
@@ -67,13 +68,23 @@ it actually uses. `mortgages.html` is the only page that pays for the calculator
 
 ---
 
-## The four scripts, and what each one earns
+## The five scripts, and what each one earns
 
-**`lenders.js` — the marquee that behaves.**
-The logo track holds two identical sets of logos, so the offset can wrap modulo one
-set-width and never show a seam. It drifts left at 24px/s, pauses on hover, glides 260px
-per arrow press, waits four seconds after you stop poking it, then resumes.
-`prefers-reduced-motion` stops the drift entirely.
+**`motion.js` — the reason nothing here feels scripted.**
+A ~200-line spring integrator plus a pointer tracker, and no dependency in sight. Springs
+are parameterised the way Apple parameterises them — a damping ratio and a response time,
+not mass/stiffness/damping — and every animation starts from the value currently on
+screen, so anything moving can be grabbed and reversed mid-flight without jumping. It also
+carries the two functions that make a flick feel physical: `project()`, which works out
+where momentum would come to rest, and `rubberband()`, which resists at a boundary instead
+of stopping dead. `prefers-reduced-motion` collapses every spring to an instant set.
+
+**`lenders.js` — the strip you can throw.**
+The logo track holds two identical sets, so the offset wraps modulo one set-width and
+never shows a seam. It drifts at 22px/s, pauses on hover, and can be dragged 1:1 with a
+finger or mouse. Let go mid-drag and it keeps going at exactly the speed you released at,
+landing where the momentum was heading. The arrows re-target the same spring, so two quick
+presses accelerate rather than restarting.
 
 **`calculator.js` — no lies about money.**
 Standard amortising repayment formula, `M = P·r(1+r)ⁿ / ((1+r)ⁿ−1)`, with a zero-rate
@@ -86,9 +97,13 @@ Field-level errors appear inline next to the offending input, not as a wall of r
 top. Only once everything passes does anything cross the network — a `POST` to Formspree.
 
 **`shared.js` — the small civilised things.**
-Hamburger toggle with real `aria-expanded` state, body scroll lock while open, Escape to
-close. Cookie banner that appears after 900ms and remembers your answer in `localStorage`
-under `hm_cookies`.
+The mobile navigation is a sheet, not a dropdown: it springs down from under the header,
+can be dragged back up at any point — including while it is still opening — and a flick
+throws it to whichever end the gesture was actually heading for. Real `aria-expanded`
+state, body scroll lock while open, Escape to close, scrim to dismiss. Plus the soft edge
+that fades in under the header only once content is passing beneath it, restrained section
+reveals, and a cookie notice that materialises (blur and scale together) after 900ms and
+remembers your answer in `localStorage` under `hm_cookies`.
 
 ---
 
@@ -96,16 +111,32 @@ under `hm_cookies`.
 
 Everything visual routes through custom properties in the `:root` block at the top of
 `base.css`. Change `--forest` there and the entire site changes with it — buttons, badges,
-hero circles, focus rings, the lot. There are no hard-coded hex values scattered through
+hero fields, focus rings, the lot. There are no hard-coded hex values scattered through
 the page CSS.
 
 The palette is deliberately unbanky: forest green and cream rather than corporate navy and
-white. Rounded 16px cards, pill buttons, soft low-opacity shadows built from the ink colour
-rather than pure black, so nothing looks like it's floating on a different page.
+white. Pill buttons, 20px cards and 28px panels, soft low-opacity shadows built from the
+ink colour rather than pure black, so nothing looks like it's floating on a different page.
+
+**Type is sized, tracked and led as a set.** Each step in the scale ships with the tracking
+and leading that actually suit it: display type is pulled in to `-0.038em` and led at 1.03,
+body sits at neutral tracking and 1.65, and small print gets a touch of positive tracking
+back. A single `letter-spacing` value is always wrong somewhere.
+
+**Chrome is a material, not a strip.** The header is translucent with the page running
+underneath it, and it earns a separating edge — a soft gradient, never a 1px rule — only
+once content is actually passing beneath. The nav sheet and cookie notice are the same
+idea, backed by `backdrop-filter`. Note the split in the cookie markup: the wrapper owns
+the transform and the surface inside owns the blur, because an element that both scales and
+filters its backdrop samples that backdrop from the wrong place.
 
 Accessibility isn't bolted on: `aria-label` on every icon-only control, `aria-expanded` that
 tracks reality, `alt` text that describes rather than repeats, `loading="lazy"` and explicit
-`width`/`height` on every image so nothing shifts as the page settles.
+`width`/`height` on every image so nothing shifts as the page settles. Three separate user
+preferences are honoured, not just the famous one — `prefers-reduced-motion` swaps travel
+for cross-fades (feedback survives; only the movement goes), `prefers-reduced-transparency`
+makes every translucent surface solid, and `prefers-contrast: more` firms up the text
+colours and gives each surface a defined border.
 
 ---
 
