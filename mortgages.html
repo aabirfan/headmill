@@ -26,11 +26,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="assets/css/base.css?v=5"/>
-<link rel="stylesheet" href="assets/css/service.css?v=4"/>
+<link rel="stylesheet" href="assets/css/base.css?v=3"/>
+<link rel="stylesheet" href="assets/css/service.css?v=2"/>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to content</a>
 
 <!-- ── NAV ── -->
 <header class="site-header">
@@ -48,7 +47,7 @@
 
     <div class="nav-right">
       <a href="tel:07751642512" class="nav-phone">07751 642 512</a>
-      <a href="#contact" class="nav-cta">Request a callback</a>
+      <a href="#contact" class="nav-cta">Contact</a>
       <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span>
         <span></span>
@@ -66,11 +65,10 @@
     <li><a href="protection.html"       class="mobile-nav-link">Protection</a></li>
     <li><a href="commercial.html"       class="mobile-nav-link">Commercial</a></li>
   </ul>
-  <a href="#contact" class="btn btn-solid">Request a callback</a>
+  <a href="#contact" class="btn btn-solid">Contact</a>
   <div class="sheet-grip" aria-hidden="true"></div>
 </div>
 
-<main id="main-content">
 <!-- ── PAGE HERO ── -->
 <div class="container page-hero-wrap">
   <section class="page-hero">
@@ -89,7 +87,7 @@
       <p class="page-hero-sub">First home, next home, better rate or growing portfolio. We search every lender on the market to find the deal that genuinely works for your circumstances, not the easiest one to place.</p>
 
       <div class="page-hero-actions">
-        <a href="#contact" class="btn btn-cream">Request a callback</a>
+        <a href="#contact" class="btn btn-cream">Start your enquiry</a>
         <a href="#calculator" class="btn btn-outline-light">Try the calculator</a>
       </div>
     </div>
@@ -105,22 +103,22 @@
   </div>
 
   <div class="offer-grid">
-    <article class="offer-card" id="first-time-buyers">
+    <article class="offer-card">
       <h3>First-Time Buyers</h3>
       <p>Getting on the ladder is harder than it should be, with deposits, affordability rules, schemes and jargon. We walk you through every step, find lenders that suit your deposit and income, and explain it all in plain English.</p>
     </article>
 
-    <article class="offer-card" id="home-movers">
+    <article class="offer-card">
       <h3>Home Movers</h3>
       <p>Moving up, downsizing or relocating. We line up your new mortgage around your sale, check whether porting your current deal beats a new one, and keep the chain moving.</p>
     </article>
 
-    <article class="offer-card" id="remortgages">
+    <article class="offer-card">
       <h3>Remortgages</h3>
       <p>Coming to the end of a fixed rate, releasing equity, or just paying more than you should? We compare your renewal against the whole market, including deals your current lender won't show you.</p>
     </article>
 
-    <article class="offer-card" id="buy-to-let">
+    <article class="offer-card">
       <h3>Buy-to-Let</h3>
       <p>Whether it's your first rental property or a growing portfolio, we know which lenders take a pragmatic view on rental cover, limited company structures and portfolio landlords.</p>
     </article>
@@ -268,7 +266,7 @@
       <div class="contact-left-inner">
         <span class="badge badge-on-green">Free consultation</span>
         <h2 class="contact-headline">Let's find <span class="accent">your mortgage.</span></h2>
-        <p class="contact-body">Leave your details and we'll call you within one business day. Your initial consultation is free, with no obligation.</p>
+        <p class="contact-body">Tell us about your situation and we'll come back to you within one business day. No obligation, no pressure, no jargon.</p>
 
         <div class="contact-details">
           <div class="contact-detail">
@@ -290,30 +288,34 @@
     <!-- Right: form -->
     <div class="contact-right">
       <form id="contact-form" class="contact-form" novalidate>
-        <h3 class="form-title">Request a callback</h3>
-        <p class="form-intro">A few details, and we'll take it from there.</p>
         <div class="f-row">
           <div class="f-group">
-            <label for="field-first-name">Your name</label>
+            <label for="field-first-name">First Name</label>
             <input type="text" id="field-first-name" name="first_name"
-              placeholder="James Smith" autocomplete="name" required/>
+              placeholder="James" autocomplete="given-name"/>
           </div>
           <div class="f-group">
-            <label for="field-phone">Phone number</label>
-            <input type="tel" id="field-phone" name="phone"
-              placeholder="07700 000 000" autocomplete="tel" required/>
+            <label for="field-last-name">Last Name</label>
+            <input type="text" id="field-last-name" name="last_name"
+              placeholder="Smith" autocomplete="family-name"/>
           </div>
         </div>
 
         <div class="f-group">
-          <label for="field-email">Email <span class="field-optional">(optional)</span></label>
+          <label for="field-email">Email</label>
           <input type="email" id="field-email" name="email"
             placeholder="james@example.com" autocomplete="email"/>
         </div>
 
         <div class="f-group">
+          <label for="field-phone">Phone</label>
+          <input type="tel" id="field-phone" name="phone"
+            placeholder="07700 000 000" autocomplete="tel"/>
+        </div>
+
+        <div class="f-group">
           <label for="field-service">I'm looking for</label>
-          <select id="field-service" name="service" required>
+          <select id="field-service" name="service">
             <option value="" disabled>Select a service</option>
             <option value="First-Time Buyer Mortgage" selected>First-Time Buyer Mortgage</option>
             <option value="Remortgage">Remortgage</option>
@@ -321,28 +323,24 @@
             <option value="Home Mover">Home Mover</option>
             <option value="Commercial / Bridging">Commercial / Bridging</option>
             <option value="Insurance &amp; Protection">Insurance &amp; Protection</option>
-            <option value="General advice">Not sure yet / something else</option>
           </select>
         </div>
 
         <div class="f-group">
-          <label for="field-message">Anything else? <span class="field-optional">(optional)</span></label>
+          <label for="field-message">Anything else?</label>
           <textarea id="field-message" name="message"
             placeholder="Timeline, property value, any complications…"></textarea>
         </div>
 
         <!-- Hidden Formspree config fields -->
-        <input type="hidden" name="_subject" value="Mortgage callback request from Headmill Capital website"/>
+        <input type="hidden" name="_subject" value="New mortgage enquiry from Headmill Capital website"/>
 
-        <button type="submit" class="form-submit">Request a callback</button>
-        <p class="form-note">Free initial consultation · Response within one business day</p>
-        <p class="form-privacy">We'll only use your details to respond. <a href="privacy.html">Privacy policy</a>.</p>
+        <button type="submit" class="form-submit">Send Enquiry</button>
+        <p class="form-note">We'll only use your details to respond to your enquiry.</p>
       </form>
     </div>
   </div>
 </section>
-
-</main>
 
 <!-- ── FOOTER ── -->
 <footer>
@@ -374,14 +372,14 @@
 <!-- ── COOKIE / PRIVACY NOTICE ── -->
 <div class="cookie-banner" id="cookie-banner" role="alert" aria-live="polite">
   <div class="cookie-surface" id="cookie-surface">
-    <p>Essential cookies only. <a href="privacy.html">Privacy policy</a>.</p>
-    <button class="cookie-accept" id="cookie-accept">Got it</button>
+    <p>We use essential cookies to make this site work. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <button class="cookie-accept" id="cookie-accept">Accept</button>
   </div>
 </div>
 
 <script src="assets/js/motion.js?v=1"></script>
-<script src="assets/js/shared.js?v=3"></script>
-<script src="assets/js/form.js?v=2"></script>
+<script src="assets/js/shared.js?v=2"></script>
+<script src="assets/js/form.js"></script>
 <script src="assets/js/calculator.js"></script>
 </body>
 </html>
