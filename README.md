@@ -7,13 +7,13 @@ Five static pages, vanilla JavaScript, and no build step or dependencies.
 
 A warm, editorial identity for homebuyers, homeowners, landlords, and business
 borrowers: deep green (`#284638`), ivory (`#F7F3EA`), and sage (`#DDE5D8`).
-Lora provides the display typography; Figtree keeps body copy and controls clear.
+Figtree provides clean, approachable typography throughout.
 
 The homepage combines a split photographic hero, an early client testimonial,
-starting points for different borrowers, an introduction to Irfan, varied service
+starting points for different borrowers, an introduction to Headmill, varied service
 features, a three-step process, client reviews, and a callback form.
-The adviser introduction uses a brand monogram; an authentic adviser portrait can
-replace it when one is available.
+The company introduction uses the Headmill monogram and keeps the focus on the
+business rather than an individual adviser.
 
 ## Run locally
 

@@ -74,7 +74,7 @@
 
   /* ── Geometry ── */
   --sage: #DDE5D8;
-  --font-editorial: 'Lora', Georgia, serif;
+  --font-display: 'Figtree', ui-sans-serif, system-ui, sans-serif;
   --r-lg: 24px;
   --r:    16px;
   --r-sm: 12px;
@@ -927,12 +927,15 @@ h1, h2, h3 {
   overflow-wrap: break-word;
 }
 h2 em {
-  font-weight: 400;
+  font-weight: inherit;
   color: var(--forest);
 }
+h1 em, h2 em, h3 em, .hero-photo em {
+  font-style: normal;
+}
 .section-head h2, .contact-headline {
-  font-family: var(--font-editorial);
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 1.14;
 }
