@@ -25,7 +25,7 @@
 <meta name="twitter:description" content="Independent whole-of-market mortgage and insurance adviser. 20+ years experience. Free initial consultation. UK regulated."/>
 
 <!-- Favicon -->
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml"/>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -33,28 +33,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="assets/css/base.css?v=3"/>
-<link rel="stylesheet" href="assets/css/home.css?v=4"/>
+<link rel="stylesheet" href="assets/css/base.css?v=5"/>
+<link rel="stylesheet" href="assets/css/home.css?v=5"/>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <!-- ── NAV ── -->
 <header class="site-header">
   <nav class="nav">
-    <a href="#" class="nav-logo" aria-label="Headmill Capital home">
-      <span class="logo-mark">H</span>
-      <span>Headmill<span class="logo-dot">.</span></span>
+    <a href="index.html" class="nav-logo" aria-label="Headmill Capital home">
+      <img class="brand-logo" src="assets/img/logo-dark.svg" alt="" width="336" height="96"/>
     </a>
 
     <ul class="nav-links">
       <li><a href="mortgages.html">Mortgages</a></li>
       <li><a href="protection.html">Protection</a></li>
       <li><a href="commercial.html">Commercial</a></li>
+      <li><a href="#about">Our story</a></li>
     </ul>
 
     <div class="nav-right">
       <a href="tel:07751642512" class="nav-phone">07751 642 512</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#contact" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a>
       <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span>
         <span></span>
@@ -66,48 +67,44 @@
 
 <!-- ── MOBILE NAV SHEET ── -->
 <div class="nav-scrim" id="nav-scrim" aria-hidden="true"></div>
-<div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Navigation menu">
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Navigation menu" aria-hidden="true" inert>
   <ul>
     <li><a href="mortgages.html"  class="mobile-nav-link">Mortgages</a></li>
     <li><a href="protection.html" class="mobile-nav-link">Protection</a></li>
     <li><a href="commercial.html" class="mobile-nav-link">Commercial</a></li>
+    <li><a href="#about" class="mobile-nav-link">Our story</a></li>
   </ul>
   <a href="#contact" class="btn btn-solid">Contact</a>
   <div class="sheet-grip" aria-hidden="true"></div>
 </div>
 
+<main id="main-content">
 <!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-field" aria-hidden="true"></div>
+<section class="hero" aria-labelledby="hero-title">
   <div class="container hero-content">
-    <span class="badge badge-on-green">
-      <span class="badge-dot"></span>
-      We Value You. Free initial consultation
-    </span>
-
-    <h1>The right mortgage,<br/><span class="accent">found for you.</span></h1>
-
-    <p class="hero-sub">Independent mortgage and insurance advice from a broker with 20+ years inside the UK's top banks. No ties, no bias. We search the whole market to find the deal that genuinely fits your life.</p>
-
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-cream">Start your enquiry</a>
-      <a href="tel:07751642512" class="btn btn-outline-light">
-        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"/></svg>
-        07751 642 512
-      </a>
+    <div class="hero-copy">
+      <p class="eyebrow">We value you.</p>
+      <h1 id="hero-title"><span>A little clarity.</span><span>A lot more</span><span class="accent">possibility.<svg class="hero-underline" viewBox="0 0 400 24" fill="none" aria-hidden="true"><path d="M4 19C118 0 265 1 395 9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span></h1>
+      <p class="hero-sub">Mortgages, protection and a person in your corner. Independent advice for wherever life takes you.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-solid">Find your way home <span aria-hidden="true">→</span></a>
+        <p class="hero-action-note">Start with a free conversation.</p>
+      </div>
     </div>
-
-    <ul class="hero-points">
-      <li>Whole-of-market</li>
-      <li>FCA regulated</li>
-      <li>Independent &amp; unbiased</li>
+    <img class="hero-art" src="assets/img/home-illustration.webp" alt="A welcoming British home with a green front door, a garden path and a brass key tagged ‘Room for your next chapter.’" width="1347" height="1168" fetchpriority="high" decoding="async"/>
+  </div>
+  <div class="container">
+    <ul class="hero-proof" aria-label="Why Headmill">
+      <li><img src="assets/img/mill.svg" width="64" height="64" alt=""/>20+ years of experience</li>
+      <li><img src="assets/img/mill.svg" width="64" height="64" alt=""/>Whole-of-market advice</li>
+      <li><img src="assets/img/mill.svg" width="64" height="64" alt=""/>Independent. Always.</li>
     </ul>
   </div>
 </section>
 
 <!-- ── LENDERS ── -->
 <div class="container lenders" aria-label="Lender panel access">
-  <p class="lenders-label">Access to every major UK lender, and dozens more</p>
+  <p class="lenders-label">Access to leading UK lenders, and dozens more</p>
   <div class="lenders-row">
     <button class="lenders-btn" id="lenders-prev" type="button" aria-label="Scroll lenders left">
       <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg>
@@ -147,49 +144,24 @@
 </div>
 
 <!-- ── SERVICES ── -->
-<section class="container" id="services">
-  <div class="section-head reveal">
-    <span class="badge badge-cream">What we do</span>
-    <h2>Advice for every step.</h2>
-    <p>Whether you're buying your first home or financing your fifth commercial property, we start with a free, no-obligation chat about what's possible.</p>
-  </div>
-
-  <div class="services-grid reveal">
-    <article class="service-card">
-      <div class="service-media">
-        <img src="assets/img/svc-mortgages.jpg" alt="Row of red brick terraced houses on a quiet British street" loading="lazy" decoding="async" width="800" height="500"/>
-      </div>
-      <div class="service-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
-      </div>
-      <h3>Mortgage Services</h3>
-      <p>First-time buyer, home mover, remortgage, buy-to-let. We search every lender to find what genuinely works for your circumstances, not the easiest deal to place.</p>
-      <a href="mortgages.html" class="service-link">Explore mortgage services <span aria-hidden="true">&rarr;</span></a>
-    </article>
-
-    <article class="service-card">
-      <div class="service-media">
-        <img src="assets/img/svc-protection.jpg" alt="A grandfather and two grandchildren preparing food together in a kitchen" loading="lazy" decoding="async" width="800" height="500"/>
-      </div>
-      <div class="service-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
-      </div>
-      <h3>Protection &amp; Insurance</h3>
-      <p>Life cover, critical illness, income protection. We build the right safety net around your mortgage and your income, without overselling what you don't need.</p>
-      <a href="protection.html" class="service-link">Explore protection <span aria-hidden="true">&rarr;</span></a>
-    </article>
-
-    <article class="service-card">
-      <div class="service-media">
-        <img src="assets/img/svc-commercial.jpg" alt="A traditional fish and chip shop on a British high street terrace" loading="lazy" decoding="async" width="800" height="500"/>
-      </div>
-      <div class="service-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a1 1 0 011-1h8a1 1 0 011 1v16"/><path d="M14 9h5a1 1 0 011 1v11"/><path d="M2 21h20"/><path d="M7 8h2M7 12h2M7 16h2"/></svg>
-      </div>
-      <h3>Commercial &amp; Bridging</h3>
-      <p>Business property finance and short-term bridging, structured fast. When a high-street lender can't move at the speed your deal requires, we can.</p>
-      <a href="commercial.html" class="service-link">Explore commercial finance <span aria-hidden="true">&rarr;</span></a>
-    </article>
+<section class="services-section" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <p class="eyebrow">Here for what’s next</p>
+    <h2 id="services-title">Big life plans. Small first steps.</h2>
+    <div class="services-grid">
+      <article class="service-card">
+        <img class="service-drawing" src="assets/img/service-door.svg" alt="" width="104" height="132" loading="lazy"/>
+        <div><h3><a href="mortgages.html" class="service-link">A home of your own <span class="service-arrow" aria-hidden="true">→</span></a></h3><p>First home, next home, or a better mortgage. We’ll help you find your way.</p></div>
+      </article>
+      <article class="service-card">
+        <img class="service-drawing" src="assets/img/service-branch.svg" alt="" width="120" height="110" loading="lazy"/>
+        <div><h3><a href="protection.html" class="service-link">Protect what matters <span class="service-arrow" aria-hidden="true">→</span></a></h3><p>Life, health and income protection. A little reassurance for the people you love.</p></div>
+      </article>
+      <article class="service-card">
+        <div class="service-growth" aria-hidden="true"><img src="assets/img/mill-cream.svg" alt="" width="64" height="64" loading="lazy"/><svg viewBox="0 0 100 40" fill="none"><path d="M5 30Q50-8 95 30M16 39Q50 8 84 39M49 0v37M7 18l13-4M77 14l15 4" stroke="#F0E9C2" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><h3><a href="commercial.html" class="service-link">Room to grow <span class="service-arrow" aria-hidden="true">→</span></a></h3><p>Commercial finance and bridging. Clear advice for your next opportunity.</p></div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -221,6 +193,7 @@
   <div class="about-grid reveal">
     <figure class="about-photo">
       <img src="assets/img/green-door.jpg" alt="Classic British townhouse with a sage green front door" loading="lazy" decoding="async" width="1200" height="1600"/>
+      <figcaption>Every next chapter starts somewhere.</figcaption>
     </figure>
     <div class="about-body">
       <span class="badge badge-cream">About Headmill</span>
@@ -291,10 +264,9 @@
   <div class="contact-panel reveal">
     <!-- Left: invitation + details -->
     <div class="contact-left">
-      <div class="contact-circle" aria-hidden="true"></div>
       <div class="contact-left-inner">
         <span class="badge badge-on-green">Free consultation</span>
-        <h2 class="contact-headline">Let's find <span class="accent">your deal.</span></h2>
+        <h2 class="contact-headline">Tell us where<br/>you’re <span class="accent">heading.</span></h2>
         <p class="contact-body">Tell us about your situation and we'll come back to you within one business day. No obligation, no pressure, no jargon.</p>
 
         <div class="contact-details">
@@ -371,14 +343,15 @@
   </div>
 </section>
 
+</main>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="container">
     <div class="footer-top">
-      <a href="#" class="footer-logo" aria-label="Headmill Capital home">
-        <span class="logo-mark">H</span>
-        <span>Headmill</span>
-        <span class="footer-tagline">We Value You</span>
+      <a href="index.html" class="footer-logo" aria-label="Headmill Capital home">
+        <img class="brand-logo" src="assets/img/logo.svg" alt="" width="336" height="96" loading="lazy"/>
+        <span class="footer-tagline">We Value You.</span>
       </a>
       <ul class="footer-links">
         <li><a href="mortgages.html">Mortgages</a></li>
@@ -411,7 +384,7 @@
      e.g. <img src="..." alt="..." loading="lazy" decoding="async" width="..." height="..."/> -->
 
 <script src="assets/js/motion.js?v=1"></script>
-<script src="assets/js/shared.js?v=2"></script>
+<script src="assets/js/shared.js?v=3"></script>
 <script src="assets/js/form.js"></script>
 <script src="assets/js/lenders.js?v=3"></script>
 </body>

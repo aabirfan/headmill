@@ -14,3 +14,9 @@ band-protection.jpg  Unsplash photo-1713942590368-09cfc6ae94ce
 band-commercial.jpg  Unsplash photo-1622374634302-b15fb01fcfde
 
 green-door.jpg       © Ben Prater (per embedded EXIF copyright)
+
+Brand illustration
+------------------
+home-illustration.webp — AI-generated with OpenAI image generation, based on the approved Headmill brand mockup.
+logo.svg / logo-dark.svg — approved mill-with-H mark; Georgia and Arial wordmark lettering converted to vector outlines.
+service-door.svg / service-branch.svg — custom vector service illustrations.

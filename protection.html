@@ -18,7 +18,7 @@
 <meta property="og:description" content="Life insurance, critical illness cover and income protection compared across the whole market. Honest advice, only the cover you need."/>
 
 <!-- Favicon -->
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml"/>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -26,28 +26,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="assets/css/base.css?v=3"/>
-<link rel="stylesheet" href="assets/css/service.css?v=2"/>
+<link rel="stylesheet" href="assets/css/base.css?v=5"/>
+<link rel="stylesheet" href="assets/css/service.css?v=3"/>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <!-- ── NAV ── -->
 <header class="site-header">
   <nav class="nav">
     <a href="index.html" class="nav-logo" aria-label="Headmill Capital home">
-      <span class="logo-mark">H</span>
-      <span>Headmill<span class="logo-dot">.</span></span>
+      <img class="brand-logo" src="assets/img/logo-dark.svg" alt="" width="336" height="96"/>
     </a>
 
     <ul class="nav-links">
       <li><a href="mortgages.html">Mortgages</a></li>
-      <li><a href="protection.html">Protection</a></li>
+      <li><a href="protection.html" aria-current="page">Protection</a></li>
       <li><a href="commercial.html">Commercial</a></li>
+      <li><a href="index.html#about">Our story</a></li>
     </ul>
 
     <div class="nav-right">
       <a href="tel:07751642512" class="nav-phone">07751 642 512</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#contact" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a>
       <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span>
         <span></span>
@@ -59,21 +60,22 @@
 
 <!-- ── MOBILE NAV PANEL ── -->
 <div class="nav-scrim" id="nav-scrim" aria-hidden="true"></div>
-<div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Navigation menu">
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Navigation menu" aria-hidden="true" inert>
   <ul>
     <li><a href="mortgages.html"        class="mobile-nav-link">Mortgages</a></li>
     <li><a href="protection.html"       class="mobile-nav-link">Protection</a></li>
     <li><a href="commercial.html"       class="mobile-nav-link">Commercial</a></li>
+    <li><a href="index.html#about" class="mobile-nav-link">Our story</a></li>
   </ul>
   <a href="#contact" class="btn btn-solid">Contact</a>
   <div class="sheet-grip" aria-hidden="true"></div>
 </div>
 
+<main id="main-content">
 <!-- ── PAGE HERO ── -->
 <div class="container page-hero-wrap">
   <section class="page-hero">
-    <div class="page-hero-circle c1" aria-hidden="true"></div>
-    <div class="page-hero-circle c2" aria-hidden="true"></div>
+    <img class="page-hero-mark" src="assets/img/mill.svg" alt="" width="64" height="64"/>
 
     <div class="page-hero-content">
       <nav class="crumbs" aria-label="Breadcrumb">
@@ -203,7 +205,6 @@
   <div class="contact-panel">
     <!-- Left: invitation + details -->
     <div class="contact-left">
-      <div class="contact-circle" aria-hidden="true"></div>
       <div class="contact-left-inner">
         <span class="badge badge-on-green">Free consultation</span>
         <h2 class="contact-headline">Let's build <span class="accent">your safety net.</span></h2>
@@ -283,14 +284,15 @@
   </div>
 </section>
 
+</main>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="container">
     <div class="footer-top">
       <a href="index.html" class="footer-logo" aria-label="Headmill Capital home">
-        <span class="logo-mark">H</span>
-        <span>Headmill</span>
-        <span class="footer-tagline">We Value You</span>
+        <img class="brand-logo" src="assets/img/logo.svg" alt="" width="336" height="96" loading="lazy"/>
+        <span class="footer-tagline">We Value You.</span>
       </a>
       <ul class="footer-links">
         <li><a href="mortgages.html">Mortgages</a></li>
@@ -319,7 +321,7 @@
 </div>
 
 <script src="assets/js/motion.js?v=1"></script>
-<script src="assets/js/shared.js?v=2"></script>
+<script src="assets/js/shared.js?v=3"></script>
 <script src="assets/js/form.js"></script>
 </body>
 </html>

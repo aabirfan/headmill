@@ -47,18 +47,26 @@
   });
 
   function setOpen(next, velocity) {
+    var wasOpen = open;
     open = next;
     hamburger.classList.toggle('open', open);
     hamburger.setAttribute('aria-expanded', String(open));
     sheet.classList.toggle('active', open);
     scrim.classList.toggle('active', open);
+    sheet.inert = !open;
+    sheet.setAttribute('aria-hidden', String(!open));
+    hamburger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
     document.body.style.overflow = open ? 'hidden' : '';
     spring.setTarget(open ? 0 : closedY, velocity);
+    if (!open && wasOpen) hamburger.focus({ preventScroll: true });
   }
 
   measure();
+  sheet.inert = true;
+  sheet.setAttribute('aria-hidden', 'true');
   render(closedY);
   addEventListener('resize', function () {
+    if (open && getComputedStyle(hamburger).display === 'none') setOpen(false);
     measure();
     if (!open && !spring.isAnimating()) render(closedY);
   });
@@ -76,6 +84,24 @@
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && open) setOpen(false);
+    if (e.key === 'Tab' && open) {
+      var links = Array.from(sheet.querySelectorAll('a'));
+      var first = links[0];
+      var last = links[links.length - 1];
+      if (e.shiftKey && document.activeElement === hamburger) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        hamburger.focus();
+      } else if (!e.shiftKey && document.activeElement === hamburger) {
+        e.preventDefault();
+        first.focus();
+      } else if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        hamburger.focus();
+      }
+    }
   });
 
   /* Grab, follow, throw. Position tracks the finger 1:1 in the
@@ -134,6 +160,8 @@
 (function () {
   var targets = document.querySelectorAll('.reveal');
   if (!targets.length) return;
+
+  document.documentElement.classList.add('js-motion');
 
   if (!('IntersectionObserver' in window)) {
     targets.forEach(function (el) { el.classList.add('in'); });

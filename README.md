@@ -15,7 +15,7 @@ Just HTML, CSS and a few hundred lines of vanilla JavaScript that know exactly w
 
 <br/>
 
-`🌲 Forest #4A6B2F` &nbsp;·&nbsp; `🌾 Cream #F0E9C2` &nbsp;·&nbsp; `🖋 Ink #1F2A1A` &nbsp;·&nbsp; `Figtree`
+`Forest #243D24` &nbsp;·&nbsp; `Olive #4A6B2F` &nbsp;·&nbsp; `Cream #F0E9C2` &nbsp;·&nbsp; `Georgia + Figtree`
 
 [**headmill.co.uk**](https://www.headmill.co.uk/) &nbsp;·&nbsp; FCA 967489
 
@@ -31,7 +31,7 @@ what Headmill does and gets an enquiry into an inbox without ceremony.
 
 There is no `package.json` here, and that's deliberate. Open `index.html` in a browser and
 the whole thing works. Deploy it by copying the folder onto a static host. The heaviest
-thing on the page is a photograph.
+thing on the page is the illustrated homepage hero.
 
 ---
 
@@ -111,12 +111,14 @@ remembers your answer in `localStorage` under `hm_cookies`.
 
 Everything visual routes through custom properties in the `:root` block at the top of
 `base.css`. Change `--forest` there and the entire site changes with it — buttons, badges,
-hero fields, focus rings, the lot. There are no hard-coded hex values scattered through
+service fields, focus rings, the lot. There are no hard-coded hex values scattered through
 the page CSS.
 
 The palette is deliberately unbanky: forest green and cream rather than corporate navy and
-white. Pill buttons, 20px cards and 28px panels, soft low-opacity shadows built from the
-ink colour rather than pure black, so nothing looks like it's floating on a different page.
+white. An illustrated home and brass key lead the homepage, paired with expressive serif
+headings and a custom mill emblem with an H at its centre. Ruled service links, modest
+button corners and a paper texture give the site an editorial feel. The original lender
+logos retain their own colours in a dedicated strip below the hero.
 
 **Type is sized, tracked and led as a set.** Each step in the scale ships with the tracking
 and leading that actually suit it: display type is pulled in to `-0.038em` and led at 1.03,
