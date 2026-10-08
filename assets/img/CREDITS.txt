@@ -21,3 +21,4 @@ home-illustration.webp — AI-generated with OpenAI image generation, based on t
 logo.svg / logo-dark.svg — approved mill-with-H mark; Georgia and Arial wordmark lettering converted to vector outlines.
 service-door.svg / service-branch.svg — custom vector service illustrations.
 commercial-illustration.webp — AI-generated with OpenAI image generation to match the approved Headmill illustration style.
+mortgages-illustration.webp / protection-illustration.webp — AI-generated with Figma AI image generation (gpt-image) to match the approved Headmill illustration style.
