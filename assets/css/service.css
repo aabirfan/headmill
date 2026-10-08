@@ -10,10 +10,10 @@
 .page-hero {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius);
+  border-radius: var(--r-lg);
   background: var(--forest);
   padding: 4rem 1.5rem;
-  box-shadow: var(--shadow-softlg);
+  box-shadow: var(--sh-2);
 }
 
 .page-hero-circle {
@@ -74,11 +74,11 @@
 }
 
 .offer-card {
-  border-radius: var(--radius);
+  border-radius: var(--r-lg);
   background: #fff;
   border: 1px solid var(--line-lt);
   padding: 2rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--sh-1);
 }
 
 .offer-card h3 {
@@ -109,10 +109,10 @@
 /* --band-focus sets the vertical crop point, per image, from the HTML */
 .media-band-frame {
   aspect-ratio: 21 / 9;
-  border-radius: var(--radius);
+  border-radius: var(--r-lg);
   overflow: hidden;
   background: var(--cream-lt);
-  box-shadow: var(--shadow-softlg);
+  box-shadow: var(--sh-2);
 }
 
 .media-band-frame img {
@@ -132,7 +132,7 @@
 
 /* ── PROCESS STEPS ──────────────────────────────────────────── */
 .steps-panel {
-  border-radius: var(--radius);
+  border-radius: var(--r-lg);
   background: var(--cream-lt);
   padding: 3rem 1.5rem;
 }
@@ -178,11 +178,11 @@
 .calc-inputs {
   display: flex;
   flex-direction: column;
-  border-radius: var(--radius);
+  border-radius: var(--r-lg);
   background: #fff;
   border: 1px solid var(--line-lt);
   padding: 2.5rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--sh-1);
 }
 
 .calc-inputs .f-row { margin-bottom: 1.5rem; }
@@ -215,17 +215,17 @@
 .calc-results-row .result-card-value { font-size: 1.75rem; }
 
 .result-card {
-  border-radius: var(--radius);
+  border-radius: var(--r-lg);
   background: #fff;
   border: 1px solid var(--line-lt);
   padding: 1.5rem 2rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--sh-1);
 }
 
 .result-card.primary {
   background: var(--forest);
   border-color: transparent;
-  box-shadow: var(--shadow-softlg);
+  box-shadow: var(--sh-2);
 }
 
 .result-card-label {
@@ -272,3 +272,37 @@
   .page-hero { padding: 5rem 3rem; }
   .steps-panel { padding: 4rem 3rem; }
 }
+
+.page-hero h1 {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+.page-hero h1 .accent {
+  display: inline-block;
+  font-style: italic;
+}
+.page-hero {
+  box-shadow: none;
+}
+.page-hero-circle.c1 {
+  background: rgba(93,121,102,0.2);
+}
+.page-hero-circle.c2 {
+  background: rgba(232,228,213,0.08);
+}
+.offer-card, .calc-inputs, .result-card {
+  box-shadow: none;
+}
+.offer-card h3, .step h3 {
+  font-weight: 600;
+}
+.crumbs {
+  color: var(--cream);
+}
+.steps-panel {
+  background: var(--sage);
+}
+@media (max-width: 640px) { .calc-inputs { padding: 1.5rem; } }

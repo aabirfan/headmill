@@ -30,13 +30,14 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="assets/css/base.css?v=3"/>
-<link rel="stylesheet" href="assets/css/home.css?v=4"/>
+<link rel="stylesheet" href="assets/css/base.css?v=4"/>
+<link rel="stylesheet" href="assets/css/home.css?v=5"/>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <!-- ── NAV ── -->
 <header class="site-header">
@@ -54,7 +55,7 @@
 
     <div class="nav-right">
       <a href="tel:07751642512" class="nav-phone">07751 642 512</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#contact" class="nav-cta">Request a callback</a>
       <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span>
         <span></span>
@@ -72,36 +73,59 @@
     <li><a href="protection.html" class="mobile-nav-link">Protection</a></li>
     <li><a href="commercial.html" class="mobile-nav-link">Commercial</a></li>
   </ul>
-  <a href="#contact" class="btn btn-solid">Contact</a>
+  <a href="#contact" class="btn btn-solid">Request a callback</a>
   <div class="sheet-grip" aria-hidden="true"></div>
 </div>
 
+<main id="main-content">
 <!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-field" aria-hidden="true"></div>
-  <div class="container hero-content">
-    <span class="badge badge-on-green">
-      <span class="badge-dot"></span>
-      We Value You. Free initial consultation
-    </span>
-
-    <h1>The right mortgage,<br/><span class="accent">found for you.</span></h1>
-
-    <p class="hero-sub">Independent mortgage and insurance advice from a broker with 20+ years inside the UK's top banks. No ties, no bias. We search the whole market to find the deal that genuinely fits your life.</p>
-
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-cream">Start your enquiry</a>
-      <a href="tel:07751642512" class="btn btn-outline-light">
-        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"/></svg>
-        07751 642 512
-      </a>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <p class="eyebrow">Independent advice. Personal by nature.</p>
+      <h1 id="hero-title">The right mortgage,<br/><em>found for you.</em></h1>
+      <p class="hero-sub">Your first home, your next chapter, or a more complicated situation. We find the mortgage that fits, and guide you through it.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-solid">Request a callback <span aria-hidden="true">↗</span></a>
+        <a href="tel:07751642512" class="text-link">Or call 07751 642 512</a>
+      </div>
+      <p class="hero-note">Free initial consultation. We'll respond within one business day.</p>
+      <ul class="hero-points">
+        <li>20+ years of experience</li>
+        <li>Whole-of-market advice</li>
+        <li>FCA regulated</li>
+      </ul>
     </div>
+    <figure class="hero-photo">
+      <img src="assets/img/green-door.jpg" alt="A welcoming green front door on a British townhouse" fetchpriority="high" decoding="async" width="1200" height="1600"/>
+      <figcaption><span class="eyebrow">For life's next move</span><span>Every front door.<br/><em>A different story.</em></span></figcaption>
+    </figure>
+  </div>
+</section>
 
-    <ul class="hero-points">
-      <li>Whole-of-market</li>
-      <li>FCA regulated</li>
-      <li>Independent &amp; unbiased</li>
-    </ul>
+<!-- ── EARLY CLIENT PROOF ── -->
+<div class="container proof-strip">
+  <div class="proof-rating"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span>5.0 on Google Reviews</span></div>
+  <figure>
+    <blockquote>“Irfan managed to get me a mortgage on a property that 2 other advisors had failed to do.”</blockquote>
+    <figcaption>Keliagh Lurka <span>· Google Reviews</span></figcaption>
+  </figure>
+  <a href="#reviews" class="text-link">Client stories <span aria-hidden="true">↗</span></a>
+</div>
+
+<!-- ── FIND YOUR STARTING POINT ── -->
+<section class="container situations" id="your-next-step" aria-labelledby="situations-title">
+  <div class="section-intro reveal">
+    <div class="section-head"><p class="eyebrow">Let's start with you</p><h2 id="situations-title">What brings you here?</h2></div>
+    <p>Wherever you are in your journey, there's a good place to start.</p>
+  </div>
+  <div class="situation-grid reveal">
+    <a href="mortgages.html#first-time-buyers" class="situation-link"><span class="situation-num">01</span><span>Buying my first home<small>A little guidance. A big first step.</small></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+    <a href="mortgages.html#home-movers" class="situation-link"><span class="situation-num">02</span><span>Moving home<small>Make room for your next chapter.</small></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+    <a href="mortgages.html#remortgages" class="situation-link"><span class="situation-num">03</span><span>Remortgaging<small>See what works for you now.</small></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+    <a href="mortgages.html#buy-to-let" class="situation-link"><span class="situation-num">04</span><span>Buying to let<small>Your first rental or a growing portfolio.</small></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+    <a href="commercial.html" class="situation-link"><span class="situation-num">05</span><span>Financing a business property<small>Commercial lending and bridging.</small></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+    <a href="#contact" class="situation-link" data-service="General advice"><span class="situation-num">06</span><span>My situation is a little different<small>Tell us your story. We're listening.</small></span><span class="link-arrow" aria-hidden="true">↗</span></a>
   </div>
 </section>
 
@@ -146,143 +170,67 @@
   </div>
 </div>
 
-<!-- ── SERVICES ── -->
-<section class="container" id="services">
-  <div class="section-head reveal">
-    <span class="badge badge-cream">What we do</span>
-    <h2>Advice for every step.</h2>
-    <p>Whether you're buying your first home or financing your fifth commercial property, we start with a free, no-obligation chat about what's possible.</p>
-  </div>
-
-  <div class="services-grid reveal">
-    <article class="service-card">
-      <div class="service-media">
-        <img src="assets/img/svc-mortgages.jpg" alt="Row of red brick terraced houses on a quiet British street" loading="lazy" decoding="async" width="800" height="500"/>
-      </div>
-      <div class="service-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
-      </div>
-      <h3>Mortgage Services</h3>
-      <p>First-time buyer, home mover, remortgage, buy-to-let. We search every lender to find what genuinely works for your circumstances, not the easiest deal to place.</p>
-      <a href="mortgages.html" class="service-link">Explore mortgage services <span aria-hidden="true">&rarr;</span></a>
-    </article>
-
-    <article class="service-card">
-      <div class="service-media">
-        <img src="assets/img/svc-protection.jpg" alt="A grandfather and two grandchildren preparing food together in a kitchen" loading="lazy" decoding="async" width="800" height="500"/>
-      </div>
-      <div class="service-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
-      </div>
-      <h3>Protection &amp; Insurance</h3>
-      <p>Life cover, critical illness, income protection. We build the right safety net around your mortgage and your income, without overselling what you don't need.</p>
-      <a href="protection.html" class="service-link">Explore protection <span aria-hidden="true">&rarr;</span></a>
-    </article>
-
-    <article class="service-card">
-      <div class="service-media">
-        <img src="assets/img/svc-commercial.jpg" alt="A traditional fish and chip shop on a British high street terrace" loading="lazy" decoding="async" width="800" height="500"/>
-      </div>
-      <div class="service-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a1 1 0 011-1h8a1 1 0 011 1v16"/><path d="M14 9h5a1 1 0 011 1v11"/><path d="M2 21h20"/><path d="M7 8h2M7 12h2M7 16h2"/></svg>
-      </div>
-      <h3>Commercial &amp; Bridging</h3>
-      <p>Business property finance and short-term bridging, structured fast. When a high-street lender can't move at the speed your deal requires, we can.</p>
-      <a href="commercial.html" class="service-link">Explore commercial finance <span aria-hidden="true">&rarr;</span></a>
-    </article>
-  </div>
-</section>
-
-<!-- ── STATS ── -->
-<section class="container">
-  <div class="stats-panel reveal">
-    <div class="stats-grid">
-      <div>
-        <div class="stat-num">20<span>+</span></div>
-        <div class="stat-label">Years experience</div>
-        <p class="stat-desc">Across Lloyds, Barclays, HSBC and other major UK banks before going independent.</p>
-      </div>
-      <div>
-        <div class="stat-num">&pound;0</div>
-        <div class="stat-label">Initial consultation</div>
-        <p class="stat-desc">We tell you what's possible before you commit to anything.</p>
-      </div>
-      <div>
-        <div class="stat-num">100<span>%</span></div>
-        <div class="stat-label">Whole of market</div>
-        <p class="stat-desc">No lender ties. No bias. Every rate from every lender available to us.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── ABOUT ── -->
-<section class="container" id="about">
+<!-- ── ADVISER ── -->
+<section class="container" id="about" aria-labelledby="about-title">
   <div class="about-grid reveal">
-    <figure class="about-photo">
-      <img src="assets/img/green-door.jpg" alt="Classic British townhouse with a sage green front door" loading="lazy" decoding="async" width="1200" height="1600"/>
-    </figure>
-    <div class="about-body">
-      <span class="badge badge-cream">About Headmill</span>
-      <h2>Twenty years inside the banks.<br/>Now on <span class="about-accent">your side.</span></h2>
-      <p>Headmill Capital was founded after two decades advising inside the UK's biggest lenders, including NatWest and Barclays. We know how banks assess a case, what makes an underwriter say yes, and which lender genuinely suits which client.</p>
-      <p>As an independent, whole-of-market broker, we answer to you, not a lender. That's what "We Value You" means: honest advice, plain English, and a deal that fits your life rather than a sales target.</p>
-      <ul class="about-points">
-        <li>Whole-of-market access to every major UK lender and dozens of specialists</li>
-        <li>Free, no-obligation initial consultation</li>
-        <li>FCA regulated (967489)</li>
-      </ul>
-      <a href="#contact" class="btn btn-solid">Speak to us today</a>
+    <div class="adviser-card">
+      <p class="eyebrow">A person in your corner</p>
+      <span class="adviser-mark" aria-hidden="true">H<span>.</span></span>
+      <div class="adviser-identity"><h3>Irfan</h3><p>Your independent mortgage<br/>and insurance adviser</p></div>
+      <a href="tel:07751642512" class="adviser-call">Let's talk <span aria-hidden="true">↗</span></a>
     </div>
+    <div class="about-body">
+      <p class="eyebrow">Meet your adviser</p>
+      <h2 id="about-title">Twenty years inside the banks.<br/><em>Now on your side.</em></h2>
+      <p>Good advice starts with someone taking the time to understand you. At Headmill, Irfan brings two decades of experience with the UK's major banks to a more personal way of finding a mortgage.</p>
+      <p>First-time buyer or experienced landlord, straightforward application or a case that needs a closer look: we explain your options in plain English and help you through the next step.</p>
+      <div class="adviser-facts"><div><strong>20+</strong><span>Years of experience</span></div><div><strong>Independent</strong><span>Whole-of-market advice</span></div><div><strong>Personal</strong><span>From first chat to completion</span></div></div>
+      <a href="#contact" class="text-link">Request a callback <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="container" id="services" aria-labelledby="services-title">
+  <div class="section-intro reveal">
+    <div class="section-head"><p class="eyebrow">Advice for the bigger picture</p><h2 id="services-title">A home. A future.<br/><em>A little peace of mind.</em></h2></div>
+    <p>Mortgages, protection, and property finance. Thoughtful advice that starts with your life.</p>
+  </div>
+  <div class="services-grid">
+    <article class="service-card service-feature reveal">
+      <figure class="service-media"><img src="assets/img/svc-mortgages.jpg" alt="A row of red-brick British homes" loading="lazy" decoding="async" width="1200" height="800"/></figure>
+      <div class="service-body"><p class="eyebrow">A place to call your own</p><h3>Mortgage advice,<br/><em>with you in mind.</em></h3><p>From your first set of keys to a growing portfolio. We compare lenders and guide your application, with your circumstances at the centre.</p><a href="mortgages.html" class="service-link">Explore mortgages <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="service-card service-support reveal">
+      <figure class="service-media"><img src="assets/img/svc-protection.jpg" alt="A family preparing a meal together at home" loading="lazy" decoding="async" width="1200" height="800"/></figure>
+      <div class="service-body"><p class="eyebrow">Look after what matters</p><h3>Protection &amp; insurance</h3><p>Life cover, critical illness and income protection. A safety net shaped around the people who depend on you.</p><a href="protection.html" class="service-link">Explore protection <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="service-card service-support reveal">
+      <figure class="service-media"><img src="assets/img/svc-commercial.jpg" alt="Shopfronts and business premises on a British high street" loading="lazy" decoding="async" width="1200" height="800"/></figure>
+      <div class="service-body"><p class="eyebrow">Room for your ambitions</p><h3>Commercial &amp; bridging</h3><p>Business property finance and short-term lending, with advice on the structure and timescale your plans need.</p><a href="commercial.html" class="service-link">Explore commercial finance <span aria-hidden="true">↗</span></a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section class="process-section" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section-intro reveal"><div class="section-head"><p class="eyebrow">A clear way forward</p><h2 id="process-title">Big decisions.<br/><em>Simple next steps.</em></h2></div><p>You don't need to have everything worked out. That's what we're here for.</p></div>
+    <ol class="home-steps reveal">
+      <li><span class="step-number">01</span><h3>Tell us your situation</h3><p>A free initial conversation about where you are, what you need, and what you'd like to happen next.</p></li>
+      <li><span class="step-number">02</span><h3>We explore your options</h3><p>We compare lenders and explain the options that fit, including the costs and what each choice means for you.</p></li>
+      <li><span class="step-number">03</span><h3>We guide your application</h3><p>From the paperwork to the progress updates, we stay with you through to completion.</p></li>
+    </ol>
+    <a href="#contact" class="text-link">Request a callback <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
 <!-- ── REVIEWS ── -->
-<section class="container" id="reviews">
-  <div class="reviews-head reveal">
-    <div class="section-head">
-      <span class="badge badge-cream">Client reviews</span>
-      <h2>Trusted when it mattered most</h2>
-    </div>
-    <p class="reviews-rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Rated 5.0 on Google Reviews</p>
-  </div>
-
+<section class="container" id="reviews" aria-labelledby="reviews-title">
+  <div class="reviews-head reveal"><div class="section-head"><p class="eyebrow">In our clients' words</p><h2 id="reviews-title">Good advice.<br/><em>Real peace of mind.</em></h2></div><p class="reviews-rating"><span class="stars" aria-hidden="true">★★★★★</span><span>Rated 5.0 on Google Reviews</span></p></div>
   <div class="reviews-grid reveal">
-    <figure class="review-card">
-      <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <blockquote class="review-text">"Irfan managed to get me a mortgage on a property that 2 other advisors had failed to do. This was down to his knowledge and contacts. He is always available, happy to help and a pleasure to work with."</blockquote>
-      <figcaption class="review-footer">
-        <span class="review-avatar">KL</span>
-        <span>
-          <span class="review-name">Keliagh Lurka</span><br/>
-          <span class="review-src">Google Reviews</span>
-        </span>
-      </figcaption>
-    </figure>
-
-    <figure class="review-card">
-      <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <blockquote class="review-text">"We got the mortgage despite it being almost impossible, we were out of luck everywhere. The team was so professional and always answered the phones. We are so happy and would HIGHLY recommend Headmill Capital!"</blockquote>
-      <figcaption class="review-footer">
-        <span class="review-avatar">SD</span>
-        <span>
-          <span class="review-name">SD Carpentry</span><br/>
-          <span class="review-src">Google Reviews</span>
-        </span>
-      </figcaption>
-    </figure>
-
-    <figure class="review-card">
-      <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <blockquote class="review-text">"4 advisors did not help us, until we met Irfan and got the mortgage! If you are looking for someone highly knowledgeable, extremely supportive and always available, Headmill Capital is the one."</blockquote>
-      <figcaption class="review-footer">
-        <span class="review-avatar">JK</span>
-        <span>
-          <span class="review-name">Jessica Kurti</span><br/>
-          <span class="review-src">Google Reviews</span>
-        </span>
-      </figcaption>
-    </figure>
+    <figure class="review-card review-feature"><span class="review-quote-mark" aria-hidden="true">“</span><blockquote class="review-text">“We got the mortgage despite it being almost impossible, we were out of luck everywhere. The team was so professional and always answered the phones. We are so happy and would HIGHLY recommend Headmill Capital!”</blockquote><figcaption class="review-footer"><span class="review-avatar">SD</span><span><span class="review-name">SD Carpentry</span><br/><span class="review-src">Google Reviews · 5 stars</span></span></figcaption></figure>
+    <figure class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote class="review-text">“4 advisors did not help us, until we met Irfan and got the mortgage! If you are looking for someone highly knowledgeable, extremely supportive and always available, Headmill Capital is the one.”</blockquote><figcaption class="review-footer"><span class="review-avatar">JK</span><span><span class="review-name">Jessica Kurti</span><br/><span class="review-src">Google Reviews</span></span></figcaption></figure>
   </div>
 </section>
 
@@ -294,8 +242,8 @@
       <div class="contact-circle" aria-hidden="true"></div>
       <div class="contact-left-inner">
         <span class="badge badge-on-green">Free consultation</span>
-        <h2 class="contact-headline">Let's find <span class="accent">your deal.</span></h2>
-        <p class="contact-body">Tell us about your situation and we'll come back to you within one business day. No obligation, no pressure, no jargon.</p>
+        <h2 class="contact-headline">It starts with<br/><em>a conversation.</em></h2>
+        <p class="contact-body">Leave your details and we'll call you within one business day. Your initial consultation is free, with no obligation.</p>
 
         <div class="contact-details">
           <div class="contact-detail">
@@ -317,34 +265,30 @@
     <!-- Right: form -->
     <div class="contact-right">
       <form id="contact-form" class="contact-form" novalidate>
+        <h3 class="form-title">Request a callback</h3>
+        <p class="form-intro">A few details, and we'll take it from there.</p>
         <div class="f-row">
           <div class="f-group">
-            <label for="field-first-name">First Name</label>
+            <label for="field-first-name">Your name</label>
             <input type="text" id="field-first-name" name="first_name"
-              placeholder="James" autocomplete="given-name"/>
+              placeholder="James Smith" autocomplete="name" required/>
           </div>
           <div class="f-group">
-            <label for="field-last-name">Last Name</label>
-            <input type="text" id="field-last-name" name="last_name"
-              placeholder="Smith" autocomplete="family-name"/>
+            <label for="field-phone">Phone number</label>
+            <input type="tel" id="field-phone" name="phone"
+              placeholder="07700 000 000" autocomplete="tel" required/>
           </div>
         </div>
 
         <div class="f-group">
-          <label for="field-email">Email</label>
+          <label for="field-email">Email <span class="field-optional">(optional)</span></label>
           <input type="email" id="field-email" name="email"
             placeholder="james@example.com" autocomplete="email"/>
         </div>
 
         <div class="f-group">
-          <label for="field-phone">Phone</label>
-          <input type="tel" id="field-phone" name="phone"
-            placeholder="07700 000 000" autocomplete="tel"/>
-        </div>
-
-        <div class="f-group">
           <label for="field-service">I'm looking for</label>
-          <select id="field-service" name="service">
+          <select id="field-service" name="service" required>
             <option value="" disabled selected>Select a service</option>
             <option value="First-Time Buyer Mortgage">First-Time Buyer Mortgage</option>
             <option value="Remortgage">Remortgage</option>
@@ -352,24 +296,27 @@
             <option value="Home Mover">Home Mover</option>
             <option value="Commercial / Bridging">Commercial / Bridging</option>
             <option value="Insurance &amp; Protection">Insurance &amp; Protection</option>
+            <option value="General advice">Not sure yet / something else</option>
           </select>
         </div>
 
         <div class="f-group">
-          <label for="field-message">Anything else?</label>
+          <label for="field-message">Anything else? <span class="field-optional">(optional)</span></label>
           <textarea id="field-message" name="message"
             placeholder="Timeline, property value, any complications…"></textarea>
         </div>
 
         <!-- Hidden Formspree config fields -->
-        <input type="hidden" name="_subject" value="New enquiry from Headmill Capital website"/>
+        <input type="hidden" name="_subject" value="Callback request from Headmill Capital website"/>
 
-        <button type="submit" class="form-submit">Send Enquiry</button>
-        <p class="form-note">We'll only use your details to respond to your enquiry.</p>
+        <button type="submit" class="form-submit">Request a callback</button>
+        <p class="form-note">Free initial consultation · Response within one business day</p>
+        <p class="form-privacy">We'll only use your details to respond. <a href="privacy.html">Privacy policy</a>.</p>
       </form>
     </div>
   </div>
 </section>
+</main>
 
 <!-- ── FOOTER ── -->
 <footer>
@@ -402,8 +349,8 @@
 <!-- ── COOKIE / PRIVACY NOTICE ── -->
 <div class="cookie-banner" id="cookie-banner" role="alert" aria-live="polite">
   <div class="cookie-surface" id="cookie-surface">
-    <p>We use essential cookies to make this site work. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
-    <button class="cookie-accept" id="cookie-accept">Accept</button>
+    <p>Essential cookies only. <a href="privacy.html">Privacy policy</a>.</p>
+    <button class="cookie-accept" id="cookie-accept">Got it</button>
   </div>
 </div>
 
@@ -411,8 +358,8 @@
      e.g. <img src="..." alt="..." loading="lazy" decoding="async" width="..." height="..."/> -->
 
 <script src="assets/js/motion.js?v=1"></script>
-<script src="assets/js/shared.js?v=2"></script>
-<script src="assets/js/form.js"></script>
+<script src="assets/js/shared.js?v=3"></script>
+<script src="assets/js/form.js?v=2"></script>
 <script src="assets/js/lenders.js?v=3"></script>
 </body>
 </html>

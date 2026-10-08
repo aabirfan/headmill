@@ -3,7 +3,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@800&amp;display=swap');
   </style>
   <!-- Light wordmark for dark / green backgrounds -->
-  <circle cx="32" cy="40" r="28" fill="#F0E9C2"/>
-  <text x="32" y="53" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="36" fill="#4A6B2F">H</text>
-  <text x="76" y="54" font-family="'Figtree', ui-sans-serif, system-ui, sans-serif" font-size="44" font-weight="800" letter-spacing="-1" fill="#F8F5E6">Headmill<tspan fill="#F0E9C2">.</tspan></text>
+  <circle cx="32" cy="40" r="28" fill="#E8E4D5"/>
+  <text x="32" y="53" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="36" fill="#284638">H</text>
+  <text x="76" y="54" font-family="'Figtree', ui-sans-serif, system-ui, sans-serif" font-size="44" font-weight="800" letter-spacing="-1" fill="#F8F5E6">Headmill<tspan fill="#E8E4D5">.</tspan></text>
 </svg>

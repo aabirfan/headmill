@@ -34,7 +34,7 @@
 
     // Fully retracted and going nowhere: take it out of the tree
     // so it can't be tabbed into or cast a shadow onto the page.
-    var hidden = progress <= 0.001;
+    var hidden = !open && progress <= 0.001;
     sheet.style.visibility = hidden ? 'hidden' : 'visible';
     scrim.style.visibility = hidden ? 'hidden' : 'visible';
   }
@@ -54,13 +54,19 @@
     scrim.classList.toggle('active', open);
     document.body.style.overflow = open ? 'hidden' : '';
     spring.setTarget(open ? 0 : closedY, velocity);
+    if (open) {
+      sheet.style.visibility = 'visible';
+      sheet.querySelector('a').focus({ preventScroll: true });
+    } else if (sheet.contains(document.activeElement)) {
+      hamburger.focus({ preventScroll: true });
+    }
   }
 
   measure();
-  render(closedY);
+  spring.set(closedY);
   addEventListener('resize', function () {
     measure();
-    if (!open && !spring.isAnimating()) render(closedY);
+    if (!open && !spring.isAnimating()) spring.set(closedY);
   });
 
   hamburger.addEventListener('click', function () {
@@ -76,6 +82,27 @@
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && open) setOpen(false);
+    if (e.key === 'Tab' && open) {
+      var links = Array.from(sheet.querySelectorAll('a'));
+      var first = links[0];
+      var last = links[links.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        hamburger.focus();
+      } else if (e.shiftKey && document.activeElement === hamburger) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        hamburger.focus();
+      } else if (!e.shiftKey && document.activeElement === hamburger) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+  addEventListener('resize', function () {
+    if (innerWidth > 900 && open) setOpen(false);
   });
 
   /* Grab, follow, throw. Position tracks the finger 1:1 in the
@@ -134,6 +161,7 @@
 (function () {
   var targets = document.querySelectorAll('.reveal');
   if (!targets.length) return;
+  document.documentElement.classList.add('js-motion');
 
   if (!('IntersectionObserver' in window)) {
     targets.forEach(function (el) { el.classList.add('in'); });
