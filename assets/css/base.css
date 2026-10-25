@@ -2,7 +2,7 @@
    Headmill Capital — base.css
    Shared foundation: design tokens, type scale, materials, reset,
    buttons, badges, nav, mobile sheet, forms, contact panel, FAQ,
-   footer, cookie banner. Page layouts live in home.css /
+   footer. Page layouts live in home.css /
    service.css / privacy.css.
 
    Two rules run through the whole file:
@@ -729,67 +729,6 @@ footer {
   color: rgba(247, 243, 232, .76);
 }
 
-/* ── COOKIE BANNER ────────────────────────────────────────────
-   Materialises rather than fading in: blur and scale animate
-   together so it reads as a surface arriving, not a decal. The
-   spring in shared.js owns transform and opacity.               */
-/* The transform lives on the wrapper and the material on the
-   surface inside it. Put both on one element and the backdrop is
-   sampled in the untransformed space — the blur visibly detaches
-   from the panel as it scales. */
-.cookie-banner {
-  visibility: hidden;
-  position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  z-index: 47;              /* below the nav scrim: an open sheet dims this too */
-  max-width: 33rem;
-  margin-inline: auto;
-  opacity: 0;
-  pointer-events: none;
-  will-change: transform, opacity;
-}
-
-.cookie-banner.active { pointer-events: auto; }
-
-.cookie-surface {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border-radius: var(--r);
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid var(--mat-edge);
-  box-shadow: var(--sh-3);
-  padding: 1rem 1.25rem 1rem 1.5rem;
-}
-
-.cookie-banner p {
-  font-size: var(--fs-xs);
-  line-height: 1.55;
-  letter-spacing: var(--tr-sm);
-  color: var(--ink-70);
-}
-.cookie-banner a { font-weight: 700; color: var(--forest); }
-.cookie-banner a:hover { color: var(--pine); }
-
-.cookie-accept {
-  border-radius: var(--r-sm);
-  border: none;
-  background: var(--forest);
-  padding: 0.5rem 1.25rem;
-  font-size: var(--fs-xs);
-  font-weight: 700;
-  font-family: inherit;
-  color: #fff;
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: background 0.2s var(--ease-out), transform 0.2s var(--ease-out);
-}
-
-.cookie-accept:hover { background: var(--pine); }
-.cookie-accept:active { transform: scale(0.95); transition-duration: 0.1s; }
-
 /* ── RESPONSIVE (shared) ────────────────────────────────────── */
 @media (max-width: 1150px) {
   .nav-phone { display: none; }
@@ -816,9 +755,6 @@ footer {
 
   .f-row { grid-template-columns: 1fr; gap: 0; margin-bottom: 0; }
   .f-row .f-group { margin-bottom: 1rem; }
-
-  .cookie-surface { flex-direction: column; align-items: stretch; text-align: center; }
-  .cookie-accept { padding: 0.75rem 1.25rem; }
 }
 
 @media (min-width: 641px) {
@@ -836,8 +772,7 @@ footer {
 
   .btn:active,
   .nav-cta:active,
-  .form-submit:active,
-  .cookie-accept:active { transform: none; }
+  .form-submit:active { transform: none; }
 
   .service-card:hover { transform: none; }
   .service-card:hover .service-media img { transform: none; }
@@ -849,7 +784,6 @@ footer {
   header.site-header,
   header.site-header.scrolled { background: var(--page); backdrop-filter: none; -webkit-backdrop-filter: none; }
   .mobile-nav { background: var(--page); backdrop-filter: none; -webkit-backdrop-filter: none; }
-  .cookie-surface { background: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; }
   .nav-scrim { backdrop-filter: none; -webkit-backdrop-filter: none; }
   .btn-outline-light { background: rgba(61, 90, 38, 0.9); backdrop-filter: none; -webkit-backdrop-filter: none; }
 }
@@ -870,7 +804,7 @@ footer {
     -webkit-backdrop-filter: none;
   }
   header.site-header::after { display: none; }
-  .cookie-surface, .mobile-nav { background: #fff; border-color: var(--line); }
+  .mobile-nav { background: #fff; border-color: var(--line); }
   .btn-outline-light { border-width: 2px; border-color: var(--cream); background: transparent; }
 }
 
@@ -879,7 +813,7 @@ footer {
   position: fixed;
   right: calc(1rem + env(safe-area-inset-right, 0px));
   bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-  z-index: 46; /* Cookie notice 47; menu scrim 48; menu 49; header 50. */
+  z-index: 46; /* Below the menu scrim (48), sheet (49) and header (50). */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -903,8 +837,8 @@ footer {
 
 .whatsapp-float svg { display: block; flex-shrink: 0; }
 
-/* The link must follow these direct body children for sibling selectors to apply. */
-.cookie-banner.active ~ .whatsapp-float,
+/* Hide during consent choices or while the mobile menu is open. */
+body:has(#iubenda-cs-banner) .whatsapp-float,
 .nav-scrim.active ~ .whatsapp-float,
 .mobile-nav.active ~ .whatsapp-float {
   visibility: hidden;

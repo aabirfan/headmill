@@ -2,9 +2,9 @@
 /* ═══════════════════════════════════════════════════════════════
    Headmill Capital — shared.js
    Chrome behaviour shared by every page: the navigation sheet,
-   the scroll edge under the header, section reveals and the
-   cookie notice. Motion runs through motion.js so anything the
-   user can touch can also be grabbed mid-flight.
+   the scroll edge under the header and section reveals.
+   Motion runs through motion.js so anything the user can touch
+   can also be grabbed mid-flight.
    ═══════════════════════════════════════════════════════════════ */
 
 /* ── NAVIGATION SHEET ─────────────────────────────────────────
@@ -177,51 +177,4 @@
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
 
   targets.forEach(function (el) { observer.observe(el); });
-})();
-
-/* ── COOKIE NOTICE ────────────────────────────────────────────
-   Materialises rather than fading: blur, scale and position
-   move together, so it reads as a surface arriving.            */
-(function () {
-  var banner = document.getElementById('cookie-banner');
-  if (!banner) return;
-
-  try {
-    if (localStorage.getItem('hm_cookies')) return;
-  } catch (err) {
-    return; // storage blocked — don't nag on every page view
-  }
-
-  var accept  = document.getElementById('cookie-accept');
-  var surface = document.getElementById('cookie-surface');
-
-  var spring = new HM.Spring({
-    value: 0,
-    damping: HM.SPRING.move.damping,
-    response: HM.SPRING.move.response,
-    onUpdate: function (p) {
-      banner.style.opacity   = p;
-      banner.style.transform = 'translate3d(0,' + ((1 - p) * 20).toFixed(2) + 'px,0) scale(' +
-                               (0.94 + 0.06 * p).toFixed(4) + ')';
-      // Blur and scale arrive together, so it reads as a material
-      // forming rather than a flat decal fading up.
-      surface.style.backdropFilter = surface.style.webkitBackdropFilter =
-        'saturate(180%) blur(' + (20 * p).toFixed(1) + 'px)';
-    },
-    onRest: function (p) {
-      if (p === 0) banner.style.visibility = 'hidden';
-    }
-  });
-
-  setTimeout(function () {
-    banner.style.visibility = 'visible';
-    banner.classList.add('active');
-    spring.setTarget(1);
-  }, 900);
-
-  accept.addEventListener('click', function () {
-    try { localStorage.setItem('hm_cookies', '1'); } catch (err) { /* nothing to do */ }
-    banner.classList.remove('active');
-    spring.setTarget(0);
-  });
 })();
