@@ -83,7 +83,7 @@
               </svg>
             </div>
             <h3 class="form-success-title">Enquiry received</h3>
-            <p class="form-success-body">We'll be in touch within one business day.<br>No obligation, no pressure, no jargon.</p>
+            <p class="form-success-body">We've received your enquiry. We'll be in touch within one business day.</p>
           </div>`;
       } else {
         throw new Error('Server error');
