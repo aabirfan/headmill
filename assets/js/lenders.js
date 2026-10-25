@@ -24,7 +24,6 @@
 
   var offset   = 0;      // px the track is shifted left
   var dragging = false;
-  var hovering = false;
   var resumeAt = 0;
   var last     = performance.now();
 
@@ -66,9 +65,6 @@
   if (prev) prev.addEventListener('click', function () { nudge(-1); });
   if (next) next.addEventListener('click', function () { nudge(1); });
 
-  marquee.addEventListener('mouseenter', function () { hovering = true; });
-  marquee.addEventListener('mouseleave', function () { hovering = false; });
-
   var grabbedAt = 0;
 
   HM.drag(marquee, {
@@ -103,7 +99,7 @@
     last = now;
 
     var idle = !dragging && !spring.isAnimating();
-    if (idle && !hovering && now > resumeAt && !HM.reduceMotion.matches) {
+    if (idle && now > resumeAt && !HM.reduceMotion.matches) {
       offset -= SPEED * dt;   // decreasing offset = logos travel right
       paint();
     }
