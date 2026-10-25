@@ -873,3 +873,50 @@ footer {
   .cookie-surface, .mobile-nav { background: #fff; border-color: var(--line); }
   .btn-outline-light { border-width: 2px; border-color: var(--cream); background: transparent; }
 }
+
+/* WhatsApp contact link. */
+.whatsapp-float {
+  position: fixed;
+  right: calc(1rem + env(safe-area-inset-right, 0px));
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  z-index: 46; /* Cookie notice 47; menu scrim 48; menu 49; header 50. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--cream);
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--page);
+  box-shadow: var(--sh-1);
+  transition: background 0.15s var(--ease-out), box-shadow 0.15s var(--ease-out);
+}
+
+.whatsapp-float:hover { background: var(--pine); }
+
+.whatsapp-float:focus-visible {
+  outline: 3px solid var(--cream);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--forest);
+}
+
+.whatsapp-float svg { display: block; flex-shrink: 0; }
+
+/* The link must follow these direct body children for sibling selectors to apply. */
+.cookie-banner.active ~ .whatsapp-float,
+.nav-scrim.active ~ .whatsapp-float,
+.mobile-nav.active ~ .whatsapp-float {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float,
+  .whatsapp-float::before,
+  .whatsapp-float::after,
+  .whatsapp-float svg {
+    animation: none;
+    transition: none;
+  }
+}

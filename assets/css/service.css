@@ -126,7 +126,7 @@
   aspect-ratio: 21 / 9;
   border-radius: var(--r);
   overflow: hidden;
-  background: var(--cream-lt);
+  background: var(--page);
   box-shadow: none;
 }
 
