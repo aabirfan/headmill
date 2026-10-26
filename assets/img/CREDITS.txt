@@ -41,10 +41,10 @@ band-protection.webp
   Location: Portugal; neutral domestic interior
 
 band-commercial.webp
-  Photographer: Samuel Isaacs
-  Source: https://unsplash.com/photos/george-street-social-cafe-with-outdoor-tables-and-brick-architecture-nU9Z09Q7Cxc
+  Photographer: Chris Dack
+  Source: https://unsplash.com/photos/white-and-brown-concrete-building-near-green-grass-field-during-daytime-6H9XK16F3wU
   Licence: Unsplash License (https://unsplash.com/license)
-  Location: Oxford, UK
+  Location: Birmingham Business Park, Solihull Parkway, Birmingham, UK
 
 Restored branding
 -----------------
