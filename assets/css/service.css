@@ -11,53 +11,38 @@
   position: relative;
   overflow: hidden;
   border-radius: var(--r);
-  background: transparent;
-  border-bottom: 1px solid var(--line);
-  padding: 3rem 0 4rem;
-  box-shadow: none;
+  background: var(--forest);
+  padding: 4rem 1.5rem;
+  box-shadow: var(--sh-2);
 }
+
+.page-hero-circle {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 50%;
+}
+.page-hero-circle.c1 { right: -6rem; top: -6rem; width: 18rem; height: 18rem; background: rgba(90, 127, 59, 0.5); }
+.page-hero-circle.c2 { right: 4rem; bottom: -6rem; width: 10rem; height: 10rem; background: rgba(240, 233, 194, 0.2); }
 
 .page-hero-content { position: relative; max-width: 42rem; }
-.page-hero-mark { position: absolute; width: clamp(5rem, 14vw, 12rem); height: auto; right: 1rem; top: 5rem; opacity: .1; }
-
-/* Service-specific artwork gives the introduction the same warmth as home. */
-.page-hero-illustrated {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  padding-block: 1rem 2.5rem;
-}
-.page-hero-illustrated .page-hero-content { min-width: 0; }
-.page-hero-art { min-width: 0; }
-.page-hero-art img { width: 100%; height: auto; }
-.page-hero-illustrated h1 { font-size: clamp(2.8rem, 4.8vw, 4.25rem); }
-.page-hero-illustrated .page-hero-sub { max-width: 32rem; line-height: 1.6; }
-.page-hero-illustrated .page-hero-actions { margin-top: 1.5rem; gap: .75rem; }
-.page-hero-illustrated .btn { padding: .9rem 1.2rem; font-size: .9375rem; }
-.page-hero-wrap + section.container { padding-top: 3.5rem; }
 
 .page-hero h1 {
   margin-top: 1.5rem;
-  font-size: clamp(2.8rem, 5.2vw, 4.5rem);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-  color: var(--forest);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
 }
 
-.page-hero h1 .accent { display: inline-block; color: var(--olive); font-style: italic; }
-.page-hero .btn-cream { background: var(--forest); color: var(--page); box-shadow: none; }
-.page-hero .btn-cream:hover { background: var(--pine); }
-.page-hero .btn-outline-light { color: var(--forest); border-color: var(--line); background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
-.page-hero .btn-outline-light:hover { background: var(--cream-lt); }
+.page-hero h1 .accent { color: var(--cream); }
 
 .page-hero-sub {
   margin-top: 1.25rem;
   max-width: 36rem;
   font-size: 1.0625rem;
   line-height: 1.7;
-  color: var(--ink-70);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .page-hero-actions {
@@ -74,11 +59,11 @@
   gap: 0.5rem;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--ink-60);
+  color: rgba(240, 233, 194, 0.7);
 }
 
-.crumbs a { color: var(--olive); transition: color 0.2s; }
-.crumbs a:hover { color: var(--forest); }
+.crumbs a { color: var(--cream); transition: color 0.2s; }
+.crumbs a:hover { color: #fff; }
 
 /* ── OFFERINGS ──────────────────────────────────────────────── */
 .offer-grid {
@@ -90,27 +75,27 @@
 
 .offer-card {
   border-radius: var(--r);
-  background: transparent;
-  border: 1px solid var(--line);
+  background: #fff;
+  border: 1px solid var(--line-lt);
   padding: 2rem;
-  box-shadow: none;
+  box-shadow: var(--sh-1);
 }
 
 .offer-card h3 {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: var(--font-editorial);
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 1.125rem;
+  font-weight: 800;
 }
 
 .offer-card h3::before {
   content: "";
   flex-shrink: 0;
-  background: url('../img/mill.svg') center / contain no-repeat;
-  width: 18px;
-  height: 18px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--forest);
 }
 
 .offer-card p {
@@ -126,8 +111,8 @@
   aspect-ratio: 21 / 9;
   border-radius: var(--r);
   overflow: hidden;
-  background: var(--page);
-  box-shadow: none;
+  background: var(--cream-lt);
+  box-shadow: var(--sh-2);
 }
 
 .media-band-frame img {
@@ -172,7 +157,7 @@
   font-weight: 800;
 }
 
-.step h3 { margin-top: 1rem; font-family: var(--font-editorial); font-size: 1.5rem; font-weight: 400; }
+.step h3 { margin-top: 1rem; font-size: 1rem; font-weight: 800; }
 
 .step p {
   margin-top: 0.5rem;
@@ -197,7 +182,7 @@
   background: #fff;
   border: 1px solid var(--line-lt);
   padding: 2.5rem;
-  box-shadow: none;
+  box-shadow: var(--sh-1);
 }
 
 .calc-inputs .f-row { margin-bottom: 1.5rem; }
@@ -234,13 +219,13 @@
   background: #fff;
   border: 1px solid var(--line-lt);
   padding: 1.5rem 2rem;
-  box-shadow: none;
+  box-shadow: var(--sh-1);
 }
 
 .result-card.primary {
   background: var(--forest);
   border-color: transparent;
-  box-shadow: none;
+  box-shadow: var(--sh-2);
 }
 
 .result-card-label {
@@ -272,17 +257,11 @@
   .offer-grid { grid-template-columns: 1fr; }
   .calc-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
-  .page-hero { padding: 2rem 0 3rem; }
-  .page-hero-mark { top: 2rem; right: 0; }
-  .page-hero-illustrated { padding-block: 1rem 2rem; gap: 1.5rem; }
-  .page-hero-illustrated .page-hero-actions { flex-direction: column; align-items: flex-start; }
+  .page-hero { padding: 3rem 1.5rem; }
   .media-band-frame { aspect-ratio: 16 / 9; }
 }
 
 @media (max-width: 640px) {
-  .page-hero-illustrated { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 1rem; }
-  .page-hero-art { width: 100%; max-width: 28rem; margin-inline: auto; }
-  .page-hero-wrap + section.container { padding-top: 2.5rem; }
   .steps-grid { grid-template-columns: 1fr; }
   .calc-results-row { grid-template-columns: 1fr; }
   .page-hero-actions .btn { width: 100%; }
@@ -290,7 +269,6 @@
 }
 
 @media (min-width: 641px) {
-  .page-hero { padding: 4rem 0; }
-  .page-hero-illustrated { padding-block: 1rem 2.5rem; }
+  .page-hero { padding: 5rem 3rem; }
   .steps-panel { padding: 4rem 3rem; }
 }

@@ -1,14 +1,23 @@
-Brand illustration
-------------------
-home-illustration.webp — AI-generated with OpenAI image generation, based on the approved Headmill brand mockup.
-logo.svg / logo-dark.svg — approved mill-with-H mark; Georgia and Arial wordmark lettering converted to vector outlines.
-service-door.svg / service-branch.svg — custom vector service illustrations.
-commercial-illustration.webp — AI-generated with OpenAI image generation to match the approved Headmill illustration style.
-mortgages-illustration.webp / protection-illustration.webp — AI-generated with Figma AI image generation (gpt-image) to match the approved Headmill illustration style.
+Photography credits
+===================
 
-Approved scene illustrations
-----------------------------
-band-mortgages.webp — AI-generated with OpenAI image_gen.imagegen; approved candidate M2, prepared for Headmill.
-band-protection.webp — AI-generated with OpenAI image_gen.imagegen; approved candidate P2, prepared for Headmill.
-band-commercial.webp — AI-generated with OpenAI image_gen.imagegen; approved candidate C2, prepared for Headmill.
-about-desk.webp — AI-generated with OpenAI image_gen.imagegen; approved candidate D1, prepared for Headmill.
+All photographs below are from Unsplash and are used under the Unsplash
+License (free for commercial use, no attribution required, but credit is
+appreciated). Source photo IDs are listed so the original can be traced
+back to its photographer at https://unsplash.com.
+
+svc-mortgages.jpg    Unsplash photo-1595751100377-9954f1f99bad
+svc-protection.jpg   Unsplash photo-1761839258803-21515f43190c
+svc-commercial.jpg   Unsplash photo-1612982295243-ce2bacc2dfbd
+band-mortgages.jpg   Unsplash photo-1618660920685-4505debb785a
+band-protection.jpg  Unsplash photo-1713942590368-09cfc6ae94ce
+band-commercial.jpg  Unsplash photo-1622374634302-b15fb01fcfde
+
+
+Restored branding
+-----------------
+logo.svg / logo-dark.svg / favicon.svg / icon.svg — round H + Headmill. logo restored verbatim from commit 57b8a37.
+
+Temporary illustration awaiting the Photo agent
+---------------------------------------------
+about-desk.webp — AI-generated with OpenAI image_gen.imagegen; existing approved scene retained temporarily in Our story.
