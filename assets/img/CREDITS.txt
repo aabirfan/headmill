@@ -35,10 +35,10 @@ band-mortgages.webp
   Location: Kensington, London, UK
 
 band-protection.webp
-  Photographer: Kampus Production
-  Source: https://www.pexels.com/photo/mother-talking-to-her-son-8035978/
-  Licence: Pexels License (https://www.pexels.com/license/)
-  Location: Portugal; neutral domestic interior
+  Photographer: Vitaly Gariev
+  Source: https://unsplash.com/photos/grandmother-and-granddaughter-preparing-food-in-the-kitchen-c4B93Sc_n_w
+  Licence: Unsplash License (https://unsplash.com/license)
+  Location: Location not supplied; ordinary domestic interior
 
 band-commercial.webp
   Photographer: Chris Dack
