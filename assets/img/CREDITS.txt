@@ -17,7 +17,3 @@ band-commercial.jpg  Unsplash photo-1622374634302-b15fb01fcfde
 Restored branding
 -----------------
 logo.svg / logo-dark.svg / favicon.svg / icon.svg — round H + Headmill. logo restored verbatim from commit 57b8a37.
-
-Temporary illustration awaiting the Photo agent
----------------------------------------------
-about-desk.webp — AI-generated with OpenAI image_gen.imagegen; existing approved scene retained temporarily in Our story.
