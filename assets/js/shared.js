@@ -154,27 +154,5 @@
   update();
 })();
 
-/* ── SECTION REVEALS ──────────────────────────────────────────
-   Restrained on purpose: enough to give the page a sense of
-   arrival, never enough to make anyone wait for it.            */
-(function () {
-  var targets = document.querySelectorAll('.reveal');
-  if (!targets.length) return;
-
-  document.documentElement.classList.add('js-motion');
-
-  if (!('IntersectionObserver' in window)) {
-    targets.forEach(function (el) { el.classList.add('in'); });
-    return;
-  }
-
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('in');
-      observer.unobserve(entry.target);
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-
-  targets.forEach(function (el) { observer.observe(el); });
-})();
+/* Content entrances live with the shared motion toolkit. */
+if (window.HM) HM.initEntrances();

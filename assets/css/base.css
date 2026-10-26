@@ -116,15 +116,14 @@ img { max-width: 100%; display: block; }
   padding-inline: 1.5rem;
 }
 
-/* Scroll-reveal. Deliberately small — 12px and an opacity fade,
-   never a slide long enough to notice as an animation. */
+/* Entrance effects are installed by JS only when observed. Default content
+   stays visible, including when scripts or IntersectionObserver fail. */
 .reveal { opacity: 1; }
-.js-motion .reveal { opacity: 0; transform: translateY(12px); }
-.reveal.in {
-  opacity: 1;
-  transform: none;
-  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
-}
+.motion-heading-host { position: relative; }
+.motion-heading-overlay { position: absolute; pointer-events: none; user-select: none; }
+.motion-line-mask { position: absolute; left: 0; width: 100%; overflow: clip; }
+.motion-line-content { position: relative; width: 100%; height: 100%; overflow: clip; }
+.motion-line-mask h1 { position: absolute; left: 0; margin: 0 !important; }
 
 /* ── Buttons ──────────────────────────────────────────────────
    Feedback lives on the press, not the release, and it's
@@ -843,7 +842,7 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 
-  .reveal { opacity: 0; transform: none; }
+  .reveal { opacity: 1; transform: none; }
   .reveal.in { transition: opacity 0.3s linear; }
 
   .btn:active,
@@ -938,4 +937,18 @@ body:has(#iubenda-cs-banner) .whatsapp-float,
     animation: none;
     transition: none;
   }
+}
+
+/* Small feedback on surfaces without an existing lift. Entrance effects use
+   an additive transform, leaving the existing card hover transform in charge. */
+.offer-card, main .review-card { transition: transform 220ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover { transform: translateY(-1px); }
+  .offer-card:hover, .review-card:hover { transform: translateY(-2px); }
+}
+.btn:active { transform: scale(.97); }
+.offer-card:active { transform: scale(.995); transition-duration: 100ms; }
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover, .btn:active, .offer-card:hover, .offer-card:active,
+  .review-card:hover { transform: none; }
 }
