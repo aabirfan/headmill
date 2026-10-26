@@ -1,18 +1,50 @@
 Photography credits
 ===================
 
-All photographs below are from Unsplash and are used under the Unsplash
-License (free for commercial use, no attribution required, but credit is
-appreciated). Source photo IDs are listed so the original can be traced
-back to its photographer at https://unsplash.com.
+Real stock photography from Unsplash and Pexels. The licences below permit
+free commercial use and modification. Attribution is included voluntarily.
+Photographs illustrate ordinary homes, households and premises; the people
+and businesses shown are not presented as Headmill clients or endorsers.
 
-svc-mortgages.jpg    Unsplash photo-1595751100377-9954f1f99bad
-svc-protection.jpg   Unsplash photo-1761839258803-21515f43190c
-svc-commercial.jpg   Unsplash photo-1612982295243-ce2bacc2dfbd
-band-mortgages.jpg   Unsplash photo-1618660920685-4505debb785a
-band-protection.jpg  Unsplash photo-1713942590368-09cfc6ae94ce
-band-commercial.jpg  Unsplash photo-1622374634302-b15fb01fcfde
+Unsplash License: https://unsplash.com/license
+Pexels License: https://www.pexels.com/license/
 
+svc-mortgages.webp
+  Photographer: Vitaly Gariev
+  Source: https://www.pexels.com/photo/young-couple-moving-into-new-home-with-boxes-36730514/
+  Licence: Pexels License (https://www.pexels.com/license/)
+  Location: Neutral domestic entrance; location not supplied
+
+svc-protection.webp
+  Photographer: Land O’Lakes, Inc.
+  Source: https://unsplash.com/photos/grandfather-and-grandchildren-prepare-food-in-kitchen-pazs-Hi5mf8
+  Licence: Unsplash License (https://unsplash.com/license)
+  Location: Location not supplied; ordinary domestic interior
+
+svc-commercial.webp
+  Photographer: Vishnu Prasad
+  Source: https://unsplash.com/photos/people-walking-past-a-store-g8U3BrdTaSY
+  Licence: Unsplash License (https://unsplash.com/license)
+  Location: Cockburn Street, Edinburgh, UK
+  Crop: below the numbered transom; no house/front-door number visible. No digit retouching.
+
+band-mortgages.webp
+  Photographer: Christian Vasile
+  Source: https://unsplash.com/photos/cars-park-outside-the-building-E_EDcwg8das
+  Licence: Unsplash License (https://unsplash.com/license)
+  Location: Kensington, London, UK
+
+band-protection.webp
+  Photographer: Kampus Production
+  Source: https://www.pexels.com/photo/mother-talking-to-her-son-8035978/
+  Licence: Pexels License (https://www.pexels.com/license/)
+  Location: Portugal; neutral domestic interior
+
+band-commercial.webp
+  Photographer: Samuel Isaacs
+  Source: https://unsplash.com/photos/george-street-social-cafe-with-outdoor-tables-and-brick-architecture-nU9Z09Q7Cxc
+  Licence: Unsplash License (https://unsplash.com/license)
+  Location: Oxford, UK
 
 Restored branding
 -----------------
