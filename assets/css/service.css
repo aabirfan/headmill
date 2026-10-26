@@ -319,3 +319,18 @@ main > section.container .btn-solid:hover {
 @media (min-width: 641px) {
   .steps-panel { padding: 4rem 3rem; }
 }
+
+/* ── ABOUT STORY ────────────────────────────────────────────── */
+.story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: start;
+  gap: 3rem;
+}
+.story-heading h2 { margin-top: 0; }
+.story-copy { max-width: 38rem; }
+.story-copy p:first-child { margin-top: 0; }
+
+@media (max-width: 760px) {
+  .story-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
