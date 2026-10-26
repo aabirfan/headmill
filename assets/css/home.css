@@ -454,11 +454,25 @@
   .stats-panel { padding: 4rem 3rem; }
 }
 
-/* Design 2's translucent circles, kept inside the full-width hero only. */
+/* Design 2's translucent circles, kept inside the full-width hero only.
+   Mobile keeps the original viewport framing; desktop uses the same 71rem
+   content column at every viewport width. */
+.hero-circles { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
 .hero-circle { pointer-events: none; position: absolute; border-radius: 50%; z-index: -1; }
 .hero-circle.c1 { right: -6rem; top: -6rem; width: 20rem; height: 20rem; background: rgba(90, 127, 59, 0.5); }
 .hero-circle.c2 { right: -2rem; top: 8rem; width: 10rem; height: 10rem; background: rgba(240, 233, 194, 0.2); }
 .hero-circle.c3 { bottom: -8rem; left: -4rem; width: 16rem; height: 16rem; background: rgba(61, 90, 38, 0.6); }
+@media (min-width: 901px) {
+  /* A solid forest field gives the reference circle colours their intended contrast. */
+  .hero-field { background: none; }
+  .hero-circles {
+    top: 4.25rem;
+    right: auto;
+    left: 50%;
+    width: min(calc(100% - 3rem), 71rem);
+    transform: translateX(-50%);
+  }
+}
 .hero-actions { align-items: center; }
 .hero-action-note { color: rgba(255, 255, 255, .86); font-size: var(--fs-sm); }
 .service-heading-link { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }

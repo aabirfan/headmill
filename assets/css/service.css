@@ -10,10 +10,10 @@
 .page-hero {
   position: relative;
   overflow: hidden;
-  border-radius: var(--r);
+  border-radius: 0;
   background: var(--forest);
   padding: 4rem 1.5rem;
-  box-shadow: var(--sh-2);
+  box-shadow: none;
 }
 
 .page-hero-circle {
