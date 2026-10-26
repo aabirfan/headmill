@@ -303,6 +303,16 @@ header.site-header.scrolled::after { opacity: 1; }
 .nav-links a:hover { color: var(--forest); background: rgba(74, 107, 47, 0.07); }
 .nav-links a:active { background: rgba(74, 107, 47, 0.12); }
 
+/* aria-current also covers About, which uses the default brand green. */
+.nav-links a[aria-current="page"],
+.mobile-nav a[aria-current="page"] {
+  color: var(--svc, var(--forest));
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.4em;
+}
+
 .nav-right { display: flex; align-items: center; gap: 1rem; }
 
 .nav-phone {
