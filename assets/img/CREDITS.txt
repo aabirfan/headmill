@@ -49,3 +49,11 @@ band-commercial.webp
 Restored branding
 -----------------
 logo.svg / logo-dark.svg / favicon.svg / icon.svg — round H + Headmill. logo restored verbatim from commit 57b8a37.
+
+about-hero.webp
+  Photographer: Stuart Frisby
+  Source: https://unsplash.com/photos/low-angle-photography-of-house-beside-trees-kHj8rhvY0L8
+  Licence: Unsplash License (https://unsplash.com/license/), permits commercial use
+  Location: Regent's Park, London, UK
+  Image: https://images.unsplash.com/photo-1557226217-d7a55eacc3cc
+  Optimisation: 1000 x 667 WebP; no retouching. No visible door numbers.
