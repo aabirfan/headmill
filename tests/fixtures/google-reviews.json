@@ -35,6 +35,13 @@
       "displayText": "What an amazing brokerage company! We got the mortgage despite it being almost impossible, we were out of luck everywhere. The team was so professional and always answered the phones. We are so happy and would HIGHLY recommend Headmill Capital! You will not be disappointed."
     },
     {
+      "name": "Keliagh Lurka",
+      "rating": 5,
+      "originalText": "Irfan managed to get me a mortgage on a property that 2 other advisors had failed to do. This was down to his knowledge and contacts. He is always available, happy to help and a pleasure to work with.",
+      "displayText": "Headmill managed to get me a mortgage on a property that 2 other advisors had failed to do. This was down to his knowledge and contacts. He is always available, happy to help and a pleasure to work with.",
+      "source": "git commit e7985e6 (4 March 2026, Google reviews); no longer visible on the live Google listing as of 2026-10-28"
+    },
+    {
       "name": "hicham arafa",
       "rating": 5,
       "originalText": "Absolutely outstanding service from Mr. Irfan from start to finish! He helped me secure the mortgage offer I needed and guided me through every step of the process with great professionalism and efficiency.\n\nWhat really stood out was his dedication even after the mortgage offer was secured. When I faced further complications and delays with the solicitors, Mr. Irfan continued to support me, offering valuable advice, following up, and even making calls to ensure everything kept moving forward.\n\nHis experience and knowledge made a huge difference, especially as I was completely unfamiliar with the process and the steps involved. He genuinely went above and beyond what I would expect from a mortgage broker.\n\nI’m extremely grateful for his patience, dedication, and support. I cannot recommend Mr. Irfan highly enough!\nThank you!!",
@@ -117,12 +124,6 @@
       "rating": 5,
       "originalText": "Excellent service",
       "displayText": "Excellent service"
-    }
-  ],
-  "excludedReviews": [
-    {
-      "name": "Keliagh Lurka",
-      "reason": "No longer appears in the current Google review listing; archived site quote excluded."
     }
   ]
 }
