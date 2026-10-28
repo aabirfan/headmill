@@ -390,6 +390,9 @@
 
 .review-card:hover { box-shadow: var(--sh-2); }
 
+.review-card[hidden] { display: none; }
+.reviews-more { margin-top: 2rem; }
+
 .review-stars {
   color: var(--forest);
   font-size: var(--fs-sm);
