@@ -1,0 +1,206 @@
+{
+  "trimMm": [
+    85,
+    55
+  ],
+  "bleedMm": 3,
+  "mediaMm": [
+    97,
+    67
+  ],
+  "pages": 2,
+  "previewDpi": 600,
+  "fonts": "All print text outlined",
+  "minimumTextPt": 6.0,
+  "minimumTextInsetMm": 4.318,
+  "exactWordingVerified": true,
+  "text": [
+    {
+      "side": "front",
+      "text": "HEADMILL CAPITAL",
+      "pt": 10.0,
+      "inkBoundsMm": [
+        17.2399,
+        5.7882,
+        50.461,
+        8.3423
+      ]
+    },
+    {
+      "side": "front",
+      "text": "We Value you",
+      "pt": 7.5,
+      "inkBoundsMm": [
+        17.0242,
+        10.3479,
+        33.3261,
+        12.7609
+      ]
+    },
+    {
+      "side": "front",
+      "text": "Aariz Irfan",
+      "pt": 15.0,
+      "inkBoundsMm": [
+        4.5402,
+        20.5821,
+        30.0016,
+        24.5635
+      ]
+    },
+    {
+      "side": "front",
+      "text": "Director Credit, Mortgage & Insurance",
+      "pt": 7.7,
+      "inkBoundsMm": [
+        4.7405,
+        27.0418,
+        51.0329,
+        29.5774
+      ]
+    },
+    {
+      "side": "front",
+      "text": "Tel: +44 (0)7751 642512",
+      "pt": 8.0,
+      "inkBoundsMm": [
+        9.2367,
+        32.9422,
+        40.2948,
+        35.4822
+      ]
+    },
+    {
+      "side": "front",
+      "text": "Email: a.irfan@headmill.co.uk",
+      "pt": 8.0,
+      "inkBoundsMm": [
+        4.7499,
+        38.1655,
+        41.4424,
+        40.7971
+      ]
+    },
+    {
+      "side": "front",
+      "text": "www.headmill.co.uk",
+      "pt": 8.0,
+      "inkBoundsMm": [
+        4.5282,
+        43.1319,
+        30.8979,
+        45.2412
+      ]
+    },
+    {
+      "side": "front",
+      "text": "@Headmillcapital",
+      "pt": 7.8,
+      "inkBoundsMm": [
+        9.3179,
+        48.1163,
+        30.9294,
+        50.6822
+      ]
+    },
+    {
+      "side": "front",
+      "text": "REGISTERED",
+      "pt": 6.0,
+      "inkBoundsMm": [
+        66.2855,
+        47.5929,
+        78.7958,
+        49.1254
+      ]
+    },
+    {
+      "side": "back",
+      "text": "HEADMILL CAPITAL",
+      "pt": 8.0,
+      "inkBoundsMm": [
+        13.6919,
+        6.8906,
+        40.2688,
+        8.9339
+      ]
+    },
+    {
+      "side": "back",
+      "text": "Headmill Capital Ltd is an Appointed Representative of PRIMIS",
+      "pt": 7.5,
+      "inkBoundsMm": [
+        4.7469,
+        18.1047,
+        78.3955,
+        20.5292
+      ]
+    },
+    {
+      "side": "back",
+      "text": "Mortgage Network, a trading name of First Complete Ltd. First",
+      "pt": 7.5,
+      "inkBoundsMm": [
+        4.7469,
+        21.8047,
+        78.1291,
+        24.2618
+      ]
+    },
+    {
+      "side": "back",
+      "text": "Complete Ltd is authorised and regulated by the Financial",
+      "pt": 7.5,
+      "inkBoundsMm": [
+        4.6213,
+        25.5047,
+        72.482,
+        27.9618
+      ]
+    },
+    {
+      "side": "back",
+      "text": "Conduct Authority.",
+      "pt": 7.5,
+      "inkBoundsMm": [
+        4.6213,
+        29.2047,
+        27.1307,
+        31.6609
+      ]
+    },
+    {
+      "side": "back",
+      "text": "Company number 13357642, registered in England & Wales.",
+      "pt": 7.5,
+      "inkBoundsMm": [
+        4.6133,
+        36.0926,
+        75.2782,
+        38.5624
+      ]
+    },
+    {
+      "side": "back",
+      "text": "Trading address: Suite 401-403, Cumberland House, 80 Scrubs",
+      "pt": 7.5,
+      "inkBoundsMm": [
+        4.5295,
+        43.1047,
+        79.1547,
+        45.5618
+      ]
+    },
+    {
+      "side": "back",
+      "text": "Lane, London NW10 6RF",
+      "pt": 7.5,
+      "inkBoundsMm": [
+        4.7469,
+        46.8162,
+        33.5301,
+        49.0056
+      ]
+    }
+  ]
+}
