@@ -280,6 +280,18 @@
 
 .stat-num span { color: var(--moss); }
 
+.stat-num.stat-text {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.service-card .referral-notice {
+  border-top: 1px solid var(--line-lt);
+  padding-top: 1rem;
+  color: var(--ink);
+}
+
 .stat-label {
   margin-top: 0.75rem;
   font-size: var(--fs-label);

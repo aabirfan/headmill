@@ -334,3 +334,22 @@ main > section.container .btn-solid:hover {
 @media (max-width: 760px) {
   .story-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
+
+/* Third-party referral disclosure on the educational page. */
+.referral-warning {
+  margin-top: 1.5rem;
+  border: 2px solid currentColor;
+  border-radius: var(--r);
+  padding: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.page-hero .referral-warning { color: #fff; }
+.referral-contact { align-items: stretch; }
+.referral-contact .contact-right {
+  display: flex;
+  align-items: center;
+}
+.referral-contact .referral-warning { margin-top: 0; }

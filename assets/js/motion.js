@@ -1,7 +1,7 @@
 'use strict';
 /* ═══════════════════════════════════════════════════════════════
    Headmill Capital — motion.js
-   A small, dependency-free spring + gesture toolkit.
+   A small spring + gesture toolkit with no external dependencies.
 
    Everything the interface animates goes through here, so motion
    is consistent and — crucially — interruptible. A spring always

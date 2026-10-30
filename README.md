@@ -7,7 +7,7 @@
 
 ### **We Value You**
 
-**The marketing site for Headmill Capital** — an independent, whole-of-market
+**The marketing site for Headmill Capital** — a whole-of-market
 UK mortgage & insurance broker.
 
 Five pages. Zero dependencies. No build step. No framework.
@@ -25,8 +25,8 @@ Just HTML, CSS and a few hundred lines of vanilla JavaScript that know exactly w
 
 ## The short version
 
-Twenty years inside NatWest, Barclays and the rest — then out, and on the client's side
-instead. This repo is the shop window for that: a fast, quiet, accessible site that explains
+Twenty years inside NatWest, Barclays and the rest inform Headmill's mortgage and protection
+advice. This repo is the shop window for that: a fast, quiet, accessible site that explains
 what Headmill does and gets an enquiry into an inbox without ceremony.
 
 There is no `package.json` here, and that's deliberate. Open `index.html` in a browser and
@@ -42,7 +42,7 @@ headmill/
 ├── index.html          Home — hero, lender marquee, services, stats, about, reviews, contact
 ├── mortgages.html      First-time buyers, remortgage, buy-to-let  +  live repayment calculator
 ├── protection.html     Life, critical illness, income protection
-├── commercial.html     Commercial & specialist lending
+├── commercial.html     Commercial mortgages and bridging explained
 ├── privacy.html        The legally required reading
 │
 └── assets/
