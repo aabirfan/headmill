@@ -473,6 +473,7 @@
 }
 
 .review-name { font-size: var(--fs-sm); font-weight: 700; }
+.review-date { display: block; margin-top: 0.25rem; font-size: var(--fs-sm); font-weight: 600; color: var(--ink-70); }
 .review-src { font-size: var(--fs-xs); font-weight: 600; color: var(--ink-50); }
 
 /* ── RESPONSIVE (home) ──────────────────────────────────────── */

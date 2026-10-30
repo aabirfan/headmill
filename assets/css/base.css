@@ -971,3 +971,24 @@ body:has(#iubenda-cs-banner) .whatsapp-float,
   .btn:hover, .btn:active, .offer-card:hover, .offer-card:active,
   .review-card:hover { transform: none; }
 }
+
+/* Mortgage warnings are static main copy, visible before any script runs. */
+.mortgage-warnings {
+  display: grid;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+.mortgage-warning {
+  border: 2px solid var(--forest);
+  border-radius: var(--r-sm);
+  padding: 1rem 1.25rem;
+  background: var(--cream-lt);
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.mortgage-warning strong { font-weight: inherit; }
+@media (min-width: 64rem) {
+  .hero-content > .mortgage-warnings { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
