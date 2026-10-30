@@ -1,0 +1,41 @@
+/* Complaints procedure. Requires base.css. */
+.complaints-wrap {
+  max-width: 50rem;
+  margin-inline: auto;
+  padding: 4rem 1.5rem;
+}
+
+.complaints-wrap h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.complaints-content h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 2.5rem 0 1rem;
+}
+
+.complaints-content h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 2rem 0 1rem;
+}
+
+.complaints-content p,
+.complaints-content ul { margin-bottom: 1rem; }
+.complaints-content p,
+.complaints-content li { color: var(--ink-70); }
+.complaints-content ul { list-style: disc; padding-left: 1.5rem; }
+.complaints-content li + li { margin-top: 0.5rem; }
+.complaints-content a {
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.complaints-content a:hover { color: var(--pine); }
+.third-party-notice { display: block; margin-top: 0.25rem; }

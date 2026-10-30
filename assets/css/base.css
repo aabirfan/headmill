@@ -740,11 +740,30 @@ footer {
 .footer-fca {
   margin-top: 3rem;
   max-width: 58rem;
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   line-height: 1.75;
   letter-spacing: var(--tr-sm);
-  color: var(--ink-50);
+  color: var(--ink-70);
 }
+
+.footer-fca p + p { margin-top: 1rem; }
+.footer-fca a { color: var(--forest); font-weight: 700; text-decoration: underline; }
+
+/* Advice fees stay readable beside the main enquiry actions. */
+.advice-fee {
+  margin-top: 1.5rem;
+  max-width: 42rem;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  font-weight: 600;
+  color: #fff;
+}
+
+.complaints-access {
+  margin-top: 2rem;
+  font-size: var(--fs-body);
+}
+.complaints-access a { color: var(--forest); font-weight: 700; text-decoration: underline; }
 
 /* ── COOKIE BANNER ────────────────────────────────────────────
    Materialises rather than fading in: blur and scale animate
