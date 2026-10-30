@@ -988,6 +988,13 @@ body:has(#iubenda-cs-banner) .whatsapp-float,
   font-weight: 700;
   line-height: 1.4;
 }
+/* Keep an unmistakable border against the dark mortgage hero backgrounds. */
+.hero .mortgage-warning,
+.page-hero .mortgage-warning {
+  border-color: var(--cream);
+  background: var(--pine);
+  color: #fff;
+}
 .mortgage-warning strong { font-weight: inherit; }
 @media (min-width: 64rem) {
   .hero-content > .mortgage-warnings { grid-template-columns: repeat(2, minmax(0, 1fr)); }
